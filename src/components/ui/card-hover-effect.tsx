@@ -5,19 +5,23 @@ import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
+import { IoIosDocument } from 'react-icons/io';
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
-    photo: string,
+    photo: string;
     title: string;
     skills: string;
     domain: string;
     experience: string;
     year: number;
     department: string;
+    linkedin: string;
+    resume: string;
   }[];
   className?: string;
 }) => {
@@ -26,8 +30,7 @@ export const HoverEffect = ({
   return (
     <div className={cn('mr-auto ml-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 w-full rounded-xl', className)}>
       {items.map((item, idx) => (
-        <Link
-          href='/'
+        <div
           key={idx}
           className='relative group p-2 h-full flex flex-col'
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -53,7 +56,7 @@ export const HoverEffect = ({
           <Card>
             <div className='w-full flex flex-row justify-center items-center text-center'>
               <img
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
                 className='rounded-full bg-blue-300/30 md:h-[21vh] md:w-[21vh] h-[17vh] w-[17vh]'
                 alt={item.title}
               />
@@ -65,8 +68,22 @@ export const HoverEffect = ({
             <div className='sm:text-md text-sm'>Skill: {item.skills}</div>
             <div className='sm:text-md text-sm'>Domain: {item.domain}</div>
             <div className='sm:text-md text-sm'>Experience: {item.experience}</div>
+            <div className='mt-5 flex flex-row justify-center items-center sm:gap-6 gap-4 w-full'>
+              <Link
+                className=' text-blue-500 text-3xl'
+                href={item.linkedin}
+              >
+                <FaLinkedin />
+              </Link>
+              <Link
+                className=' text-blue-500 text-3xl'
+                href={item.resume}
+              >
+                <IoIosDocument />
+              </Link>
+            </div>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );

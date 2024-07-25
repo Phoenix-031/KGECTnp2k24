@@ -9,6 +9,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -18,6 +20,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -27,6 +31,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -36,6 +42,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -45,6 +53,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -54,6 +64,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -63,6 +75,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -72,6 +86,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -81,6 +97,8 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
   {
     photo: "../assets/images/student-photo.jpeg",
@@ -90,5 +108,7 @@ export const students = [
     experience: 'GDSC KGEC, KeyGen coders',
     year: 2,
     department: 'CSE',
+    linkedin: "/",
+    resume: "/"
   },
 ];
