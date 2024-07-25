@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Ray",
+      "role": "Head of Product at Fireworks",
+      "image": "/images/testimonial1.jpg",
+      "testimonial": "I'd highly recommend working..."
+    },
+    {
+      "name": "Rahul",
+      "role": "Founder at Rogue and Moonbeam",
+      "image": "/images/testimonial2.jpg",
+      "testimonial": "He is the best front-end developer..."
+    },
+    {
+      "name": "Sasi Kala",
+      "role": "Founder at Sasi",
+      "image": "/images/testimonial3.jpg",
+      "testimonial": "Sasi is best bro..."
+    }
+  ]
+  
