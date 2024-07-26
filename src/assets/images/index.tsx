@@ -1,4 +1,4 @@
-import studentPhoto from "./student-photo.jpeg"
+import studentPhoto from "./studentphoto.png"
 
 export {
     studentPhoto,

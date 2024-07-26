@@ -1,12 +1,15 @@
 'use client';
 
-// import { studentPhoto } from '@/assets/images';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 import { IoIosDocument } from 'react-icons/io';
+import { studentPhoto } from '@/assets/images';
+
+
 
 export const HoverEffect = ({
   items,
@@ -55,9 +58,9 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <div className='w-full flex flex-row justify-center items-center text-center'>
-              <img
-                src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-                className='rounded-full bg-blue-300/30 md:h-[21vh] md:w-[21vh] h-[17vh] w-[17vh]'
+              <Image
+                src={studentPhoto}
+                className='rounded-full sm:w-[21vh] sm:h-[21vh] w-[19vh] h-[19vh]'
                 alt={item.title}
               />
             </div>
@@ -65,9 +68,9 @@ export const HoverEffect = ({
             <div className='sm:text-md text-sm'>
               {item.year}|{item.department}
             </div>
-            <div className='sm:text-md text-sm'>Skill: {item.skills}</div>
-            <div className='sm:text-md text-sm'>Domain: {item.domain}</div>
-            <div className='sm:text-md text-sm'>Experience: {item.experience}</div>
+            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Skill:</span> {item.skills}</div>
+            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Domain:</span> {item.domain}</div>
+            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Experience:</span> {item.experience}</div>
             <div className='mt-5 flex flex-row justify-center items-center sm:gap-6 gap-4 w-full'>
               <Link
                 className=' text-blue-500 text-3xl'
