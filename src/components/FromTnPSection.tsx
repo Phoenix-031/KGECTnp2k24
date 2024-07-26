@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import {Faculty} from './types'
-
+import { Faculty } from './types';
 
 const FromTnPSection = () => {
   const [faculties, setFaculties] = useState<Faculty[]>([]);

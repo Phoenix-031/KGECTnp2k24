@@ -1,20 +1,14 @@
-"use client";
-
-import type { NextPage } from 'next';
+import FromTnPSection from '../components/FromTnPSection';
 import WhyKGECSection from '../components/WhyKGECSection';
 import TestimonialSection from '../components/TestimonialSection';
-import FromTnPSection from '../components/FromTnPSection';
+// import 'tailwindcss/tailwind.css';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <div>
-      <main>
-        <WhyKGECSection />
-        <FromTnPSection />
-        <TestimonialSection />
-      </main>
-    </div>
+    <main>
+      <WhyKGECSection />
+      <FromTnPSection />
+      <TestimonialSection />
+    </main>
   );
-};
-
-export default Home;
+}
