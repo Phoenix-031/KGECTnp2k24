@@ -1,0 +1,9 @@
+
+[
+    { "department": "CSE", "desktop": 200, "mobile": 80 },
+    { "department": "IT", "desktop": 305, "mobile": 200 },
+    { "department": "ECE", "desktop": 237, "mobile": 120 },
+    { "department": "EE", "desktop": 73, "mobile": 190 },
+    { "department": "ME", "desktop": 209, "mobile": 130 }
+  ]
+  

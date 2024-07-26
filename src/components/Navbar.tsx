@@ -21,6 +21,7 @@ export const Navbar = () => {
         'p-4',
         'gap-10',
         'flex-col',
+        'z-10'
       ];
     } else {
       menuClasses.push('hidden', 'md:flex');
@@ -88,7 +89,7 @@ export const Navbar = () => {
             STUDENT LOGIN
           </Link>
         </div>
-        <div className='md:hidden flex items-center mr-[-14px] z-10'>
+        <div className='md:hidden flex items-center mr-[-14px]'>
           <button onClick={() => setIsOpen(!isOpen)} >
             <svg
               className='hamburger-menu'

@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Image1, Image2 } from '@/assets';
+import { bgImg, Image1, Image2 } from '@/assets';
 import data from '../data/data.json';
 
 const Hero = () => {
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div className='relative'>
       <div className='mt-[-5px]'>
         <div className='flex flex-row items-center justify-center sm:flex-row sm:items-center sm:justify-center pt-20'>
           <Image
@@ -29,12 +29,13 @@ const Hero = () => {
         <div className='flex items-center justify-center pt-8'>
           <p className='text-center mx-4'>{data.text}</p>
         </div>
-        <div className='flex items-center justify-center mt-16 mb-4'>
-          <button className='w-[230px] h-[50px] bg-custom-blue text-center text-white font-semibold rounded-lg p-2'>
+        <div className='flex items-center justify-center mt-16'>
+          <button className='w-[230px] h-[50px] bg-custom-blue text-center text-white font-semibold rounded-lg p-2 mb-8'>
             DOWNLOAD BROCHURE
           </button>
         </div>
       </div>
+      <Image src={bgImg} alt='background-image' fill={true} className='object-cover z-[-10]' /*width={1000} height={700}*//>
     </div>
   );
 };
