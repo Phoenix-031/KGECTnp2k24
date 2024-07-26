@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 
 interface Testimonial {
@@ -53,9 +54,11 @@ const TestimonialSection = () => {
                   animate="visible"
                   exit="exit"
                 >
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
+                    width={100}  // Replace with the actual width
+                    height={100}
                     className="w-16 h-16 rounded-full mx-auto"
                   />
                   <h3 className="mt-4 text-xl font-semibold text-center">
@@ -63,7 +66,7 @@ const TestimonialSection = () => {
                   </h3>
                   <p className="mt-2 text-gray-600 text-center">{testimonial.role}</p>
                   <p className="mt-4 text-gray-700 text-center">
-                    "{testimonial.testimonial}"
+                  &quot;{testimonial.testimonial}&quot;
                   </p>
                 </motion.div>
               )

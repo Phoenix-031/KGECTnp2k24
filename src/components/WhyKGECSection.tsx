@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 
 interface LogoData {
@@ -33,9 +34,11 @@ const WhyKGECSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {sectionData.logos.map((logo, index) => (
             <div key={index} className="text-center">
-              <img
+              <Image
                 src={logo.image}
                 alt={logo.title}
+                width={100}  // Replace with the actual width
+                height={100}
                 className="w-24 h-24 mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold">{logo.title}</h3>

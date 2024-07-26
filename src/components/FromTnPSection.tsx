@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 
 interface Faculty {
@@ -27,9 +28,11 @@ const FromTnPSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {faculties.map((faculty, index) => (
             <div key={index} className="p-6 bg-custom-gray2 shadow-md flex">
-              <img
+              <Image
                 src={faculty.image}
                 alt={faculty.name}
+                width={100}  // Replace with the actual width
+                height={100}
                 className="w-82 h-82"
               />
               <div className="ml-4">
