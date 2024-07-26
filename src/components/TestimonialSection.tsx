@@ -3,14 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import 'tailwindcss/tailwind.css';
-
-interface Testimonial {
-  name: string;
-  role: string;
-  image: string;
-  testimonial: string;
-}
+import { Testimonial } from './types';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },

@@ -1,18 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import 'tailwindcss/tailwind.css';
+import { SectionData } from './types';
 
-interface LogoData {
-  image: string;
-  title: string;
-  description: string;
-}
-
-interface SectionData {
-  title: string;
-  description: string;
-  logos: LogoData[];
-}
 
 const WhyKGECSection = () => {
   const [sectionData, setSectionData] = useState<SectionData | null>(null);

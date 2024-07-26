@@ -2,14 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import 'tailwindcss/tailwind.css';
+import {Faculty} from './types'
 
-interface Faculty {
-  name: string;
-  designation: string;
-  image: string;
-  description: string;
-}
 
 const FromTnPSection = () => {
   const [faculties, setFaculties] = useState<Faculty[]>([]);
