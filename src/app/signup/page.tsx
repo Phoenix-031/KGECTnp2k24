@@ -120,7 +120,7 @@ const SignUp: React.FC = () => {
             <label className="formLabel" htmlFor="conpass">Confirm Password</label>
           </div>
           <div className="formOutline mb4 input-group select-container">
-            <select name="yog" id="yog" onChange={(e) => setYog(e.target.value)} className='formControl' required>
+            <select name="yog" id="yog" value={yog} onChange={(e) => setYog(e.target.value)} className='formControl' required>
               <option value="2025" selected>2025</option>
               <option value="2026">2026</option>
               <option value="2027">2027</option>
@@ -129,7 +129,7 @@ const SignUp: React.FC = () => {
             <label className="formLabel" htmlFor="yog">Year of Graduation</label>
           </div>
           <div className="formOutline mb4 input-group select-container">
-            <select name="department" id="department" onChange={(e) => setDepartment(e.target.value)} className='formControl' required>
+            <select name="department" id="department" value={department} onChange={(e) => setDepartment(e.target.value)} className='formControl' required>
               <option value="" selected disabled>Select your Department</option>
               <option value="CSE">Computer Science and Engineering</option>
               <option value="IT">Information Technology</option>
