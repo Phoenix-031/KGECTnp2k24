@@ -12,6 +12,10 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.11.0",
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -20,7 +24,9 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.2.1",
     "react-loader-spinner": "^6.1.6",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
