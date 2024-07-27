@@ -1,5 +1,3 @@
-import studentPhoto from "./studentphoto.png"
+import studentPhoto from './studentphoto.png';
 
-export {
-    studentPhoto,
-}
+export { studentPhoto };
