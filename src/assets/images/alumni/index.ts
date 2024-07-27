@@ -12,34 +12,50 @@ export {alumni1,alumni2,alumni3,alumni4,alumni5,alumni6,alumni7,alumni8};
 export const a= [
     {
         name: "",
-        pic: alumni1
+        pic: alumni1,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni2
+        pic: alumni2,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni3
+        pic: alumni3,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni4
+        pic: alumni4,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni5
+        pic: alumni5,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni6
+        pic: alumni6,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni7
+        pic: alumni7,
+        linkedin: "",
+        company: ""
     },
     {
         name: "",
-        pic: alumni8
+        pic: alumni8,
+        linkedin: "",
+        company: ""
     }
 ]

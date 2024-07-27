@@ -1,27 +1,25 @@
-import group1 from './Group1.png';
-import group2 from './Group2.png';
-import group3 from './Group3.png';
-import group4 from './Group4.png';
+import group1 from './Sarnavo Saha Sarder.png';
+import group2 from './Rekden Lama.png';
+import group3 from './Subhadeep Das.png';
 
-export{group1,group2,group3,group4};
+
+export{group1,group2,group3};
 export const st = [
     {
-        name: "",
+        name: "Sarnavo Saha Sarder",
         image: group1,
-        linkedin: ""
+        linkedin: "https://www.linkedin.com/in/sarnavo/",
+        designation: "Additional Cheif Training & Placement Representative (Placement)"
     },
     {
-        name: "",
+        name: "Rekden Lama",
         image: group2,
-        linkedin: ""
+        linkedin: "https://www.linkedin.com/in/rekden-lama/",
+        designation: "Cheif Training & Placement Representative"
     },
     {
-        name: "",
+        name: "Subhadeep Das",
         image: group3,
-        linkedin: ""
-    },
-    {
-        name: "",
-        image: group4,
-        linkedin: ""
+        linkedin: "https://www.linkedin.com/in/subhadeepdas06/",
+        designation: "Additional Cheif Training & Placement Representative (Internship & Training)"
     }]

@@ -17,23 +17,17 @@ const OurTeam = () => {
           return (
             <div className="relative group flex flex-col items-center" key={index}>
               <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="relative">
-                <Image
+                <Image width={40} height={40}
                   src={item.image}
                   alt={item.name}
-                  className="transition-transform transform group-hover:scale-105"
+                  className="transition-transform transform group-hover:scale-105 sm:w-48 sm:h-48 w-52 h-52 rounded-full"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-full">
-                  <Image
-                    src="/linkedin.svg" // path to your LinkedIn logo
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    className="mb-2"
-                  />
-                  <span className="text-white text-sm">View LinkedIn</span>
+                <Image src="./linkedin.svg" alt="LinkedIn" width={40} height={40} className="text-white"/>
                 </div>
               </a>
-              <p className="mt-2">{item.name}</p>
+              <p className="font-medium">{item.name}</p>
+              <p className="italic text-center text-balance  font-light w-64">{item.designation}</p>
             </div>
           );
         })}
@@ -48,23 +42,18 @@ const OurTeam = () => {
           return (
             <div className="relative group flex flex-col items-center" key={index}>
               <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="relative">
-                <Image
+              <Image
                   src={item.image}
                   alt={item.name}
-                  className="transition-transform transform group-hover:scale-105"
+                  className="transition-transform transform group-hover:scale-105 sm:w-48 sm:h-48 w-52 h-52 rounded-full"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-full">
-                  <Image
-                    src="/linkedin.svg" // path to your LinkedIn logo
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    className="mb-2"
-                  />
-                  <span className="text-white text-sm">View LinkedIn</span>
+                <Image src="./linkedin.svg" alt="LinkedIn" width={40} height={40} className="text-white"/>
                 </div>
               </a>
-              <p className="mt-2">{item.name}</p>
+              <p className="font-medium">{item.name}</p>
+              <p className="italic text-center text-balance  font-light w-64">{item.designation}</p>
+
             </div>
           );
         })}

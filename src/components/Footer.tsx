@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css';
 
 function Footer() {
   return (
-    <footer className="text-white-100 bg-[#0C84AA] h-28 w-screen">
+    <footer className="text-white-100 bg-[#0C84AA] h-28 w-screen mb-0">
       <div className=" container mx-2 mr-0 text-white flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
         <Link
           href={"/"}
@@ -19,7 +19,7 @@ function Footer() {
         </p>
         <a href="https://www.linkedin.com/company/tnpkgec/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
       <Image
-        className="justify-self-end "
+        className="w-full ml-5"
         alt="LinkedIn Profile"
         src="/linkedin.svg"
         width={40}
