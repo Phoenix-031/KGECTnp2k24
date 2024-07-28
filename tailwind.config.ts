@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -23,7 +24,12 @@ const config = {
       },
     },
     extend: {
+     zIndex:{
+      '-10':'-10'
+     },
       colors: {
+        'custom-blue': '#0C84AA',
+        'accordian-grey' : '#D9D9D9',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
