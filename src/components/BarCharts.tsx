@@ -1,7 +1,7 @@
 "use client"
 
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from 'recharts'
-import chartData from '../ui/Bar.json' 
+import chartData from '../data/data.json'  // Ensure the path is correct
 
 import {
   Card,
@@ -10,14 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/components/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart'
+} from '@/components/chart'
 
+// Define chart configuration
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -36,7 +37,7 @@ export function BarCharts() {
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={chartData.desktop_data_alternative}  // Use the alternative data here
             margin={{
               top: 20,
             }}

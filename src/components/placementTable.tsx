@@ -1,8 +1,8 @@
 'use client';
 
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import placementData from '../ui/placementData.json'; 
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table';
+import placementData from '../data/data.json'; 
 
 interface PlacementTableProps {
   year: string;

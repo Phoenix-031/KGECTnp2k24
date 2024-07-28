@@ -1,7 +1,0 @@
-[
-    { "department": "CSE", "desktop": 186, "fill": "var(--color-CSE)" },
-    { "department": "IT", "desktop": 305, "fill": "var(--color-IT)" },
-    { "department": "ECE", "desktop": 237, "fill": "var(--color-ECE)" },
-    { "department": "EE", "desktop": 173, "fill": "var(--color-EE)" },
-    { "department": "ME", "desktop": 209, "fill": "var(--color-ME)" }
-  ]

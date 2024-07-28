@@ -1,18 +1,18 @@
 'use client';
 
 import * as React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { PieCharts } from './ui/PieChart';
-import { BarCharts } from './ui/BarCharts';
-import { BarChartHorizontal } from './ui/BarChartHorizontal';
-import { PlacementTable } from './ui/placementTable';
-import data from './ui/placementData.json';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/accordion';
+import { PieCharts } from './PieChart';
+import { BarCharts } from './BarCharts';
+import { BarChartHorizontal } from './BarChartHorizontal';
+import { PlacementTable } from './placementTable';
+import data from '../data/data.json';
 
 const PlacementStatistics = () => {
   const years = data.years;
 
   return (
-    <div className='w-full h-full flex flex-col items-start'>
+    <div id='placement-statistics' className='w-full h-full flex flex-col items-start'>
       <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
       <div className='lg:mx-8 lg:w-[1420px] lg:mb-4 w-80 mb-6 mx-5'>
         <Accordion

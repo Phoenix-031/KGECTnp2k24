@@ -1,7 +1,7 @@
 "use client"
 
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from 'recharts'
-import chartData from '../ui/barChartData.json' 
+import chartData from '../data/data.json'  // Ensure the path is correct
 
 import {
   Card,
@@ -10,14 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/components/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart'
+} from '@/components/chart'
 
+// Define chart configuration
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -43,7 +44,7 @@ export function BarChartHorizontal() {
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={chartData.desktop_and_mobile_data}  // Use the data containing both desktop and mobile data
             layout="vertical"
             margin={{
               right: 16,
@@ -66,12 +67,12 @@ export function BarChartHorizontal() {
             />
             <Bar
               dataKey="desktop"
-              layout="vertical"
               fill="var(--color-desktop)"
               radius={4}
+              name={chartConfig.desktop.label}
             >
               <LabelList
-                dataKey="department"
+                dataKey="desktop"
                 position="insideLeft"
                 offset={8}
                 className="fill-[--color-label]"
@@ -85,11 +86,32 @@ export function BarChartHorizontal() {
                 fontSize={12}
               />
             </Bar>
+            <Bar
+              dataKey="mobile"
+              fill="var(--color-mobile)"
+              radius={4}
+              name={chartConfig.mobile.label}
+            >
+              <LabelList
+                dataKey="mobile"
+                position="insideLeft"
+                offset={8}
+                className="fill-[--color-label]"
+                fontSize={12}
+              />
+              <LabelList
+                dataKey="mobile"
+                position="right"
+                offset={8}
+                className="fill-foreground"
+                fontSize={12}
+              />
+            </Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-      
+        {/* Footer Content */}
       </CardFooter>
     </Card>
   )

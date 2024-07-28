@@ -1,7 +1,0 @@
-[
-    { "department": "CSE", "desktop": 186 },
-    { "department": "IT", "desktop": 305 },
-    { "department": "ECE", "desktop": 237 },
-    { "department": "EE", "desktop": 73 },
-    { "department": "ME", "desktop": 209 }
-  ]

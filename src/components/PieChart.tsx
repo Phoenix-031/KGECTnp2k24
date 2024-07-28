@@ -4,7 +4,8 @@ import * as React from "react"
 import { Label, Pie, PieChart, Sector } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 
-import pieChartData from '../ui/pieData.json' 
+
+import pieChartData from '../data/data.json'
 
 import {
   Card,
@@ -12,21 +13,22 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/components/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart'
+} from '@/components/chart'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
+} from '@/components/select'
+
 
 const chartConfig = {
   visitors: {
@@ -62,13 +64,16 @@ const chartConfig = {
 
 export function PieCharts() {
   const id = "pie-interactive"
-  const [activedepartment, setActivedepartment] = React.useState(pieChartData[0].department)
+  
+  
+  const [activedepartment, setActivedepartment] = React.useState(pieChartData.desktop_data[0].department)
 
   const activeIndex = React.useMemo(
-    () => pieChartData.findIndex((item) => item.department === activedepartment),
+    () => pieChartData.desktop_data.findIndex((item) => item.department === activedepartment),
     [activedepartment]
   )
-  const departments = React.useMemo(() => pieChartData.map((item) => item.department), [])
+  
+  const departments = React.useMemo(() => pieChartData.desktop_data.map((item) => item.department), [])
 
   return (
     <Card data-chart={id} className="flex flex-col bg-accordian-grey border-none">
@@ -126,7 +131,7 @@ export function PieCharts() {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={pieChartData}
+              data={pieChartData.desktop_data}
               dataKey="desktop"
               nameKey="department"
               innerRadius={60}
@@ -161,7 +166,7 @@ export function PieCharts() {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {pieChartData[activeIndex].desktop.toLocaleString()}
+                          {pieChartData.desktop_data[activeIndex]?.desktop.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
