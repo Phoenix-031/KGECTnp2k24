@@ -1,5 +1,6 @@
-import StudentCard from '@/components/student-filter/StudentCard';
+import StudentCard from '@/components/StudentCard';
 import { filterText, yearRange } from '@/data/student-detail-page';
+import { students } from '@/data/students';
 import React from 'react';
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 
@@ -79,8 +80,10 @@ const page = () => {
           </div>
         ))}
       </div>
-      <div className='w-full'>
-        <StudentCard />
+      <div className='gap-2 w-full grid grid-cols-5 row-auto'>
+        {students.map((student, index) => (
+          <StudentCard key={index} student={student}/>
+        ))}
       </div>
     </div>
   );
