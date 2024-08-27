@@ -10,7 +10,6 @@ export const Navbar = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const navbarRef = useRef<HTMLDivElement>(null);
 
-  
   function getMenuClasses() {
     let menuClasses = [];
 
@@ -25,7 +24,7 @@ export const Navbar = () => {
         'p-4',
         'gap-10',
         'flex-col',
-        'z-10'
+        'z-10',
       ];
     } else {
       menuClasses.push('hidden', 'md:flex');
@@ -39,23 +38,19 @@ export const Navbar = () => {
       const currentScrollTop = window.pageYOffset;
 
       if (currentScrollTop > lastScrollTop) {
-      
         setIsVisible(false);
       } else {
-      
         setIsVisible(true);
       }
 
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); 
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-  
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
-  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -75,7 +70,12 @@ export const Navbar = () => {
           href='#'
           className='text-2xl font-bold ml-[-14px]'
         >
-          <Image src={Image2} alt="Logo" width={40} height={40} />
+          <Image
+            src={Image2}
+            alt='Logo'
+            width={40}
+            height={40}
+          />
         </a>
         <div className={`${getMenuClasses()} pl-4`}>
           <Link
@@ -129,7 +129,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className='md:hidden flex items-center mr-[-14px]'>
-          <button onClick={() => setIsOpen(!isOpen)} >
+          <button onClick={() => setIsOpen(!isOpen)}>
             <svg
               className='hamburger-menu'
               width='24'

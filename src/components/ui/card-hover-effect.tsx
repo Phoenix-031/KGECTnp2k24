@@ -9,8 +9,6 @@ import { FaLinkedin } from 'react-icons/fa';
 import { IoIosDocument } from 'react-icons/io';
 import { studentPhoto } from '@/assets/images';
 
-
-
 export const HoverEffect = ({
   items,
   className,
@@ -68,9 +66,15 @@ export const HoverEffect = ({
             <div className='sm:text-md text-sm'>
               {item.year}|{item.department}
             </div>
-            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Skill:</span> {item.skills}</div>
-            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Domain:</span> {item.domain}</div>
-            <div className='sm:text-md text-sm font-sans'><span className='font-bold'>Experience:</span> {item.experience}</div>
+            <div className='sm:text-md text-sm font-sans'>
+              <span className='font-bold'>Skill:</span> {item.skills}
+            </div>
+            <div className='sm:text-md text-sm font-sans'>
+              <span className='font-bold'>Domain:</span> {item.domain}
+            </div>
+            <div className='sm:text-md text-sm font-sans'>
+              <span className='font-bold'>Experience:</span> {item.experience}
+            </div>
             <div className='mt-5 flex flex-row justify-center items-center sm:gap-6 gap-4 w-full'>
               <Link
                 className=' text-blue-500 text-3xl'
