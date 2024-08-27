@@ -82,7 +82,10 @@ const page = () => {
       </div>
       <div className='gap-2 w-full grid grid-cols-5 row-auto'>
         {students.map((student, index) => (
-          <StudentCard key={index} student={student}/>
+          <StudentCard
+            key={index}
+            student={student}
+          />
         ))}
       </div>
     </div>
