@@ -11,38 +11,37 @@ function Footer() {
           
         </div> */}
         <div className='grid grid-cols-1 sm:grid-cols-3 mt-10 mb-8'>
-          
-            <div className=' font-light px-8 font-Inter text-lg rounded-xl '>
+          <div className=' font-light px-8 font-Inter text-lg rounded-xl '>
             <Link
-            href={'/'}
-            className='flex title-font font-extrabold items-center pb-4 text-gray-100'
-          >
-            <Image
-              alt='Navbar Logo'
-              src={'/kgec.svg'}
-              width={60}
-              height={60}
-            />
-          </Link>
-              <p className='mb-4'>Training and Placement Cell, KGEC</p>
-              <p className='mb-4'>Kalyani Government Engineering College, Kalyani, Nadia, West Bengal, India. </p>
-              <p>
-                {' '}
-                <a href='mailto:tnp_kgec@kgec.edu.in'>tnp_kgec@kgec.edu.in</a>
-              </p>
-              <p>
-                {' '}
-                <a href='tel:08016895669'>080168 95669</a>{' '}
-              </p>
-            </div>
-            <div></div>
+              href={'/'}
+              className='flex title-font font-extrabold items-center pb-4 text-gray-100'
+            >
+              <Image
+                alt='Navbar Logo'
+                src={'/kgec.svg'}
+                width={60}
+                height={60}
+              />
+            </Link>
+            <p className='mb-4'>Training and Placement Cell, KGEC</p>
+            <p className='mb-4'>Kalyani Government Engineering College, Kalyani, Nadia, West Bengal, India. </p>
+            <p>
+              {' '}
+              <a href='mailto:tnp_kgec@kgec.edu.in'>tnp_kgec@kgec.edu.in</a>
+            </p>
+            <p>
+              {' '}
+              <a href='tel:08016895669'>080168 95669</a>{' '}
+            </p>
+          </div>
+          <div></div>
           <div className='flex flex-col gap-4 items-start w-full'>
-          <p className='flex items-center text-sm text-gray-100 pl-4 sm:border-l-2 sm:border-gray-200 mt-4 '>
-            © TnP cell, Kalyani Government Engineering College
-          </p>
+            <p className='flex items-center text-sm text-gray-100 pl-4 sm:border-l-2 sm:border-gray-200 mt-4 '>
+              © TnP cell, Kalyani Government Engineering College
+            </p>
             {/* <p className='text-lg '>Socials</p> */}
             <a
-             className='flex gap-2'
+              className='flex gap-2'
               href='https://www.linkedin.com/company/tnpkgec/posts/?feedView=all'
               target='_blank'
               rel='noopener noreferrer'
