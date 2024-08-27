@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Contactinfo from "@/components/Contactinfo";
@@ -14,4 +15,13 @@ export default function Home() {
       <Footer/>
     </main>
   );
+import Hero from "@/components/Hero";
+import PlacementStatistics from "@/components/PlacementStatistics";
+
+
+export default function Home() {
+  return <main>
+    <Hero/>
+    <PlacementStatistics/>
+    </main>;
 }
