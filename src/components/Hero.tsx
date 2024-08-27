@@ -35,7 +35,12 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <Image src={bgImg} alt='background-image' fill={true} className='object-cover z-[-10]' /*width={1000} height={700}*//>
+      <Image
+        src={bgImg}
+        alt='background-image'
+        fill={true}
+        className='object-cover z-[-10]' /*width={1000} height={700}*/
+      />
     </div>
   );
 };
