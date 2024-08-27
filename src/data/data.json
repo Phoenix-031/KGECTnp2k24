@@ -1,0 +1,82 @@
+{
+  "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur alias quod, consectetur debitis soluta corporis culpa suscipit quibusdam, laboriosam dicta minus dolore dignissimos doloremque nostrum vero explicabo, eaque reiciendis accusantium.",
+  "years": [
+    {
+      "year": "2020-24",
+      "departments": [
+        { "department": "CSE", "students": 52, "offers": 15, "total": 18 },
+        { "department": "IT", "students": 53, "offers": 16, "total": 20 },
+        { "department": "ECE", "students": 49, "offers": 14, "total": 17 },
+        { "department": "EE", "students": 46, "offers": 19, "total": 22 },
+        { "department": "ME", "students": 45, "offers": 21, "total": 25 }
+      ]
+    },
+    {
+      "year": "2021-25",
+      "departments": [
+        { "department": "CSE", "students": 60, "offers": 18, "total": 22 },
+        { "department": "IT", "students": 58, "offers": 20, "total": 25 },
+        { "department": "ECE", "students": 55, "offers": 16, "total": 20 },
+        { "department": "EE", "students": 50, "offers": 21, "total": 23 },
+        { "department": "ME", "students": 47, "offers": 19, "total": 21 }
+      ]
+    },
+    {
+      "year": "2022-26",
+      "departments": [
+        { "department": "CSE", "students": 63, "offers": 20, "total": 24 },
+        { "department": "IT", "students": 60, "offers": 22, "total": 26 },
+        { "department": "ECE", "students": 57, "offers": 18, "total": 22 },
+        { "department": "EE", "students": 55, "offers": 23, "total": 25 },
+        { "department": "ME", "students": 50, "offers": 20, "total": 22 },
+        { "department": "CHE", "students": 42, "offers": 12, "total": 15 }
+      ]
+    },
+    {
+      "year": "2023-27",
+      "departments": [
+        { "department": "CSE", "students": 67, "offers": 22, "total": 26 },
+        { "department": "IT", "students": 63, "offers": 24, "total": 28 },
+        { "department": "ECE", "students": 60, "offers": 20, "total": 23 },
+        { "department": "EE", "students": 58, "offers": 25, "total": 27 },
+        { "department": "ME", "students": 52, "offers": 22, "total": 24 },
+        { "department": "CHE", "students": 45, "offers": 14, "total": 17 },
+        { "department": "BIO", "students": 38, "offers": 10, "total": 13 }
+      ]
+    },
+    {
+      "year": "2024-28",
+      "departments": [
+        { "department": "CSE", "students": 70, "offers": 24, "total": 28 },
+        { "department": "IT", "students": 65, "offers": 26, "total": 30 },
+        { "department": "ECE", "students": 62, "offers": 22, "total": 25 },
+        { "department": "EE", "students": 60, "offers": 27, "total": 29 },
+        { "department": "ME", "students": 55, "offers": 24, "total": 26 },
+        { "department": "CHE", "students": 48, "offers": 16, "total": 19 },
+        { "department": "BIO", "students": 42, "offers": 12, "total": 15 },
+        { "department": "MATH", "students": 40, "offers": 13, "total": 17 }
+      ]
+    }
+  ],
+  "desktop_data": [
+    { "department": "CSE", "desktop": 186, "fill": "var(--color-CSE)" },
+    { "department": "IT", "desktop": 305, "fill": "var(--color-IT)" },
+    { "department": "ECE", "desktop": 237, "fill": "var(--color-ECE)" },
+    { "department": "EE", "desktop": 173, "fill": "var(--color-EE)" },
+    { "department": "ME", "desktop": 209, "fill": "var(--color-ME)" }
+  ],
+  "desktop_data_alternative": [
+    { "department": "CSE", "desktop": 186 },
+    { "department": "IT", "desktop": 305 },
+    { "department": "ECE", "desktop": 237 },
+    { "department": "EE", "desktop": 73 },
+    { "department": "ME", "desktop": 209 }
+  ],
+  "desktop_and_mobile_data": [
+    { "department": "CSE", "desktop": 200, "mobile": 80 },
+    { "department": "IT", "desktop": 305, "mobile": 200 },
+    { "department": "ECE", "desktop": 237, "mobile": 120 },
+    { "department": "EE", "desktop": 73, "mobile": 190 },
+    { "department": "ME", "desktop": 209, "mobile": 130 }
+  ]
+}
