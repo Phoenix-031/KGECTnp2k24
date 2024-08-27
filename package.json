@@ -1,11 +1,16 @@
 {
-  "name": "kgectnp_2k24",
+  "name": "your-project-name",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev & npm run prepare",
     "build": "next build",
     "start": "next start",
+
+    "lint": "next lint"
+  },
+  "dependencies": {
+
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "fix": "eslint . --ext ts,tsx --fix",
     "format": "prettier --write ./src",
@@ -21,31 +26,34 @@
     "@vercel/speed-insights": "^1.0.12",
     "chart.js": "^4.4.3",
     "class-variance-authority": "^0.7.0",
+
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.17",
-    "lucide-react": "^0.414.0",
     "next": "14.2.5",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+
+
+    "react-fast-marquee": "^1.6.5",
+    "sharp": "^0.33.4",
+    "tailwind-merge": "^2.4.0"
+
     "react-icons": "^5.2.1",
+
     "react-loader-spinner": "^6.1.6",
     "sharp": "^0.33.4",
     "recharts": "^2.12.7",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
+
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8.57.0",
+    "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.1.1",
-    "lint-staged": "^15.2.7",
     "postcss": "^8",
-    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
