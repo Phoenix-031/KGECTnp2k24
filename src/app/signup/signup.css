@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  overflow: auto; 
+  overflow: auto;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -20,11 +20,11 @@
   animation: appear 0.5s ease-in;
 }
 
-.signup-container h1{
+.signup-container h1 {
   font-size: xx-large;
-    text-align: center;
-    color: #0C84AA;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #0c84aa;
+  margin-bottom: 20px;
 }
 
 .formOutline {
@@ -41,7 +41,7 @@
 }
 
 .formControl:focus {
-  border-color: #0C84AA;
+  border-color: #0c84aa;
   box-shadow: 0 0 5px rgba(12, 132, 170, 0.5);
 }
 
@@ -52,7 +52,7 @@
   background: #fff;
   padding: 0 0.25rem;
   font-size: 0.85rem;
-  color: #0C84AA;
+  color: #0c84aa;
 }
 
 .btn {
@@ -85,7 +85,7 @@
 }
 
 .select-container {
-  color: #0C84AA;
+  color: #0c84aa;
 }
 
 .input-group {
@@ -97,12 +97,13 @@
   flex: 1;
 }
 
-#domains,#skills{
+#domains,
+#skills {
   margin: 3px;
 }
 
-#skills::placeholder{
-  color: #0C84AA;
+#skills::placeholder {
+  color: #0c84aa;
 }
 
 .delete-btn {
@@ -120,14 +121,14 @@
   align-items: center;
 }
 
-.sgpa{
+.sgpa {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2px;
 }
 
-@media(max-width:415px){
-  .sgpa{
+@media (max-width: 415px) {
+  .sgpa {
     display: flex;
     flex-direction: column;
   }
