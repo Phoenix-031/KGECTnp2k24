@@ -17,7 +17,7 @@ const PlacementStatistics = () => {
       className='h-full flex flex-col justify-center items-center'
     >
       <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
-      <div className='lg:mx-8 lg:mb-4 mb-6 mx-5 w-[85vw]'>
+      <div className='lg:mx-8 lg:w-[80%] lg:mb-4 w-80 mb-6 mx-5'>
         <Accordion
           className='gap-4 items-center'
           type='single'
