@@ -72,7 +72,8 @@ export const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };1 
+  };
+  1;
 
   return (
     <>
@@ -83,7 +84,10 @@ export const Navbar = () => {
         }`}
       >
         <div className='container flex justify-between items-center'>
-          <a href='#' className='text-2xl font-bold ml-[-14px]'>
+          <a
+            href='#'
+            className='text-2xl font-bold ml-[-14px]'
+          >
             <Image
               alt='Navbar Logo'
               src={'/kgec.svg'}
@@ -92,28 +96,57 @@ export const Navbar = () => {
             />
           </a>
           <div className={`${getMenuClasses()} pl-4`}>
-            <Link href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               HOME
             </Link>
-            <Link onClick={() => scrollToSection('')} href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              onClick={() => scrollToSection('')}
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               WHY RECRUIT US
             </Link>
-            <Link onClick={() => scrollToSection('placement-statistics')} href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              onClick={() => scrollToSection('placement-statistics')}
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               FROM T&P CELL
             </Link>
-            <Link onClick={() => scrollToSection('placement-statistics')} href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              onClick={() => scrollToSection('placement-statistics')}
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               PLACEMENT STATISTICS
             </Link>
-            <Link onClick={() => scrollToSection('past-recruiters')} href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              onClick={() => scrollToSection('past-recruiters')}
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               PAST RECRUITERS
             </Link>
-            <Link onClick={() => scrollToSection('contact-us')} href='/' className='mx-3 hover:text-gray-300'>
+            <Link
+              onClick={() => scrollToSection('contact-us')}
+              href='/'
+              className='mx-3 hover:text-gray-300'
+            >
               CONTACT US
             </Link>
-            <Link href='/student-details' className='mx-3 hover:text-gray-300'>
+            <Link
+              href='/student-details'
+              className='mx-3 hover:text-gray-300'
+            >
               STUDENT DETAILS
             </Link>
-            <Link href='/signup' className='mx-3 hover:text-gray-300 mb-5'>
+            <Link
+              href='/signup'
+              className='mx-3 hover:text-gray-300 mb-5'
+            >
               STUDENT LOGIN
             </Link>
           </div>
@@ -150,7 +183,10 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className={getOverlayClasses()} onClick={() => setIsOpen(false)}></div>
+      <div
+        className={getOverlayClasses()}
+        onClick={() => setIsOpen(false)}
+      ></div>
     </>
   );
 };
