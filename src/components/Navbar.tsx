@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -71,11 +70,10 @@ export const Navbar = () => {
           className='text-2xl font-bold ml-[-14px]'
         >
           <Image
-           alt='Navbar Logo'
-           src={'/kgec.svg'}
+            alt='Navbar Logo'
+            src={'/kgec.svg'}
             width={40}
             height={40}
-
           />
         </a>
         <div className={`${getMenuClasses()} pl-4`}>

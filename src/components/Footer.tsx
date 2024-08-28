@@ -13,7 +13,6 @@ function Footer() {
             src={'/kgec.svg'}
             width={70}
             height={70}
-           
           />
         </Link>
         <div className='ml-7 h-10 border-l border-white'></div>
