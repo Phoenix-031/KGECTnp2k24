@@ -15,12 +15,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "sm": "640px",   
-        "md": "768px",   
-        "lg": "1024px",  
-        "xl": "1280px",
         "2xl": "1400px",
-        "3xl": "1600px",
       },
     },
     extend: {
@@ -28,6 +23,7 @@ const config = {
       '-10':'-10'
      },
       colors: {
+        light_yellow: "#F4CE44",
         'custom-blue': '#0C84AA',
         'accordian-grey' : '#D9D9D9',
         border: "hsl(var(--border))",

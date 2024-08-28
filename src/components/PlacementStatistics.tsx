@@ -14,12 +14,12 @@ const PlacementStatistics = () => {
   return (
     <div
       id='placement-statistics'
-      className='w-full h-full flex flex-col items-start'
+      className='h-full flex flex-col justify-center items-center'
     >
       <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
-      <div className='lg:mx-8 lg:w-[1420px] lg:mb-4 w-80 mb-6 mx-5'>
+      <div className='lg:mx-8 lg:mb-4 mb-6 mx-5 w-[85vw]'>
         <Accordion
-          className='gap-4'
+          className='gap-4 items-center'
           type='single'
           collapsible
         >
@@ -50,7 +50,7 @@ const PlacementStatistics = () => {
           ))}
         </Accordion>
       </div>
-    </div>
+    </div> 
   );
 };
 

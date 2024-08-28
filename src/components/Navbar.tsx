@@ -61,7 +61,7 @@ export const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className={`bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 z-10 md:items-center transition-transform duration-300 ${
+      className={`z-10 bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -116,7 +116,7 @@ export const Navbar = () => {
             CONTACT US
           </Link>
           <Link
-            href='/'
+            href='/student-details'
             className='mx-3 hover:text-gray-300'
           >
             STUDENT DETAILS
