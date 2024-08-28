@@ -30,7 +30,7 @@ const Hero = () => {
           <p className='text-center mx-4'>{data.text}</p>
         </div>
         <div className='flex items-center justify-center mt-16'>
-          <button className='w-[230px] h-[50px] bg-custom-blue text-center text-white font-semibold rounded-lg p-2 mb-8'>
+          <button className='w-[230px] h-[50px] bg-red-600 text-center text-white font-semibold rounded-lg p-2 mb-8 -z-0'>
             DOWNLOAD BROCHURE
           </button>
         </div>
