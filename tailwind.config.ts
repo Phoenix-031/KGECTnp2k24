@@ -23,6 +23,11 @@ const config = {
       '-10':'-10'
      },
       colors: {
+        custom: {
+          yellow: "#E6C651",
+          gray: "#D9D9D9",
+          gray2: "#F5F3F1",
+        },
         light_yellow: "#F4CE44",
         'custom-blue': '#0C84AA',
         'accordian-grey' : '#D9D9D9',
