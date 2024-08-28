@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Image2 } from '../assets/index';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,8 +70,8 @@ export const Navbar = () => {
           className='text-2xl font-bold ml-[-14px]'
         >
           <Image
-            src={Image2}
-            alt='Logo'
+            alt='Navbar Logo'
+            src={'/kgec.svg'}
             width={40}
             height={40}
           />

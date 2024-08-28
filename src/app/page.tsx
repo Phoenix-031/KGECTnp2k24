@@ -1,15 +1,21 @@
 import Alumni from '@/components/Alumni';
 // import Contactinfo from '@/components/Contactinfo';
 import Footer from '@/components/Footer';
+import FromTnPSection from '@/components/FromTNPSection';
 import Hero from '@/components/Hero';
 import OurTeam from '@/components/OurTeam';
 import Pastrecruiters from '@/components/Pastrecruiters';
 import PlacementStatistics from '@/components/PlacementStatistics';
+import TestimonialSection from '@/components/TestimonialSection';
+import WhyKGECSection from '@/components/WhyKGECSection';
 
-export default function Home() {
+function Home() {
   return (
-    <main>
+    <main className='w-full overflow-x-hidden'>
       <Hero />
+      <WhyKGECSection />
+      <FromTnPSection />
+      <TestimonialSection />
       <PlacementStatistics />
       <Pastrecruiters />
       <OurTeam />
@@ -18,3 +24,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
