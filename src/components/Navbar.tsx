@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -19,8 +18,8 @@ export const Navbar = () => {
         'absolute',
         'top-[60px]',
         'bg-custom-blue',
-        'w-1/2',
-        'left-0',
+        'w-full',
+        'left-1/2',
         'p-4',
         'gap-10',
         'flex-col',
@@ -71,11 +70,10 @@ export const Navbar = () => {
           className='text-2xl font-bold ml-[-14px]'
         >
           <Image
-           alt='Navbar Logo'
-           src={'/kgec.svg'}
+            alt='Navbar Logo'
+            src={'/kgec.svg'}
             width={40}
             height={40}
-
           />
         </a>
         <div className={`${getMenuClasses()} pl-4`}>
@@ -86,12 +84,14 @@ export const Navbar = () => {
             HOME
           </Link>
           <Link
+            onClick={() => scrollToSection('')}
             href='/'
             className='mx-3 hover:text-gray-300'
           >
             WHY RECRUIT US
           </Link>
           <Link
+            onClick={() => scrollToSection('placement-statistics')}
             href='/'
             className='mx-3 hover:text-gray-300'
           >
@@ -105,25 +105,29 @@ export const Navbar = () => {
             PLACEMENT STATISTICS
           </Link>
           <Link
+            onClick={() => scrollToSection('past-recruiters')}
             href='/'
             className='mx-3 hover:text-gray-300'
           >
             PAST RECRUITERS
           </Link>
           <Link
+            onClick={() => scrollToSection('contact-us')}
             href='/'
             className='mx-3 hover:text-gray-300'
           >
             CONTACT US
           </Link>
           <Link
+            
             href='/student-details'
             className='mx-3 hover:text-gray-300'
           >
             STUDENT DETAILS
           </Link>
           <Link
-            href='/'
+            
+            href='/signup'
             className='mx-3 hover:text-gray-300'
           >
             STUDENT LOGIN
