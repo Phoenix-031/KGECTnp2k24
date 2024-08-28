@@ -1,5 +1,4 @@
 import Alumni from '@/components/Alumni';
-// import Contactinfo from '@/components/Contactinfo';
 import Footer from '@/components/Footer';
 import FromTnPSection from '@/components/FromTNPSection';
 import Hero from '@/components/Hero';
