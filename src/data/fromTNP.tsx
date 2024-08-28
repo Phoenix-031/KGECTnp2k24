@@ -1,4 +1,4 @@
-[
+export const faculties = [
     {
       "name": "Faculty Name",
       "designation": "Designation",

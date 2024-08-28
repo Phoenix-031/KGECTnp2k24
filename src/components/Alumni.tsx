@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { a } from '../assets/images/alumni';
 import { studentPhoto } from '@/assets/images';
+import { FaLinkedinIn } from 'react-icons/fa';
 const Alumni = () => {
   return (
     <div className='flex flex-col justify-center items-center min-s-screen'>
@@ -32,13 +33,7 @@ const Alumni = () => {
                       alt={item.name}
                     />
                     <div className='absolute inset-0 flex items-center justify-center bg-blue-500 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity rounded-full'>
-                      <Image
-                        src='./linkedin.svg'
-                        alt='LinkedIn'
-                        width={40}
-                        height={40}
-                        className='text-white'
-                      />
+                    <FaLinkedinIn className='w-[40px] h-[40px] text-blue-600'/>
                     </div>
                   </div>
                 </a>
