@@ -9,9 +9,9 @@ import PlacementStatistics from '@/components/PlacementStatistics';
 import TestimonialSection from '@/components/TestimonialSection';
 import WhyKGECSection from '@/components/WhyKGECSection';
 
-export default function Home() {
+ function Home() {
   return (
-    <main>
+    <main className="w-full overflow-x-hidden">
       <Hero />
       <WhyKGECSection />
       <FromTnPSection />
@@ -24,3 +24,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
