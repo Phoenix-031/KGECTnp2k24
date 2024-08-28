@@ -12,7 +12,10 @@ const PlacementStatistics = () => {
   const years = data.years;
 
   return (
-    <div id='placement-statistics' className='w-full h-full flex flex-col items-start'>
+    <div
+      id='placement-statistics'
+      className='w-full h-full flex flex-col items-start'
+    >
       <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
       <div className='lg:mx-8 lg:w-[1420px] lg:mb-4 w-80 mb-6 mx-5'>
         <Accordion
@@ -34,13 +37,13 @@ const PlacementStatistics = () => {
                   <PlacementTable year={yearData.year} />
                 </div>
                 <div className='w-full h-full mt-10'>
-                  <PieCharts  />
+                  <PieCharts />
                 </div>
                 <div className='mt-10 w-full h-full'>
                   <BarCharts />
                 </div>
                 <div className='mt-10 w-full h-full'>
-                  <BarChartHorizontal  />
+                  <BarChartHorizontal />
                 </div>
               </AccordionContent>
             </AccordionItem>
