@@ -5,7 +5,10 @@ import 'tailwindcss/tailwind.css';
 
 function Footer() {
   return (
-    <div className='text-white bg-[#0C84AA] w-full px-10 pt-10 pb-4'>
+    <div
+      className='text-white bg-[#0C84AA] w-full px-10 pt-10 pb-4'
+      id='contact-us'
+    >
       <div className='flex flex-row justify-start items-center'>
         <Link href={'/'}>
           <Image
@@ -13,7 +16,6 @@ function Footer() {
             src={'/kgec.svg'}
             width={70}
             height={70}
-           
           />
         </Link>
         <div className='ml-7 h-10 border-l border-white'></div>

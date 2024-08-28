@@ -16,7 +16,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  max-width: 80%;
   animation: appear 0.5s ease-in;
 }
 
@@ -91,6 +91,7 @@
 .input-group {
   display: flex;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .input-group .formControl {
@@ -123,8 +124,12 @@
 
 .sgpa {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* Add some gap between columns */
+}
+
+.sgpa .formOutline {
+  margin-bottom: 0; /* Remove bottom margin in the grid items */
 }
 
 @media (max-width: 415px) {
