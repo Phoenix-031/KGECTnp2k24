@@ -119,14 +119,12 @@ export const Navbar = () => {
             CONTACT US
           </Link>
           <Link
-            
             href='/student-details'
             className='mx-3 hover:text-gray-300'
           >
             STUDENT DETAILS
           </Link>
           <Link
-            
             href='/signup'
             className='mx-3 hover:text-gray-300'
           >

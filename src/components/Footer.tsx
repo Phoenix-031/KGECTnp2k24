@@ -5,7 +5,10 @@ import 'tailwindcss/tailwind.css';
 
 function Footer() {
   return (
-    <div className='text-white bg-[#0C84AA] w-full px-10 pt-10 pb-4' id='contact-us'>
+    <div
+      className='text-white bg-[#0C84AA] w-full px-10 pt-10 pb-4'
+      id='contact-us'
+    >
       <div className='flex flex-row justify-start items-center'>
         <Link href={'/'}>
           <Image
