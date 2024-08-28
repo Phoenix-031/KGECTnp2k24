@@ -5,7 +5,10 @@ import Marquee from 'react-fast-marquee';
 
 const Pastrecruiters = () => {
   return (
-    <div className='flex flex-col justify-center items-center min-s-screen'>
+    <div
+      className='flex flex-col justify-center items-center min-s-screen'
+      id='past-recruiters'
+    >
       <p className='text-4xl p-4 mb-10 non-italic font-bold'>Past Recruiters</p>
       <div className='w-full flex flex-row justify-center items-center'>
         <Marquee
