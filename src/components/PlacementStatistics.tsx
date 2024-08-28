@@ -50,7 +50,7 @@ const PlacementStatistics = () => {
           ))}
         </Accordion>
       </div>
-    </div> 
+    </div>
   );
 };
 

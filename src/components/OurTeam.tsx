@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Image from 'next/image';
 import React from 'react';
@@ -19,7 +19,10 @@ const OurTeam = () => {
         <div className=' w-full flex flex-row flex-wrap justify-center items-center h-fit gap-10'>
           {ts.map((item, index) => {
             return (
-              <div key={index} className='relative group flex flex-col items-center overflow-visible'>
+              <div
+                key={index}
+                className='relative group flex flex-col items-center overflow-visible'
+              >
                 <a
                   href={item.linkedin}
                   target='_blank'
