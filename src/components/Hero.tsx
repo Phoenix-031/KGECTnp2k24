@@ -1,4 +1,4 @@
-"use client";  
+'use client';
 
 import Image from 'next/image';
 import { bgImg, Image1, Image2 } from '@/assets';
@@ -26,31 +26,27 @@ const Hero = () => {
           />
         </div>
         <div className='flex flex-col items-center justify-center mt-16'>
-          <h2 className='font-bold mb-0 text-sm lg:text-xl'>
-            TRAINING AND PLACEMENT CELL
-          </h2>
-          <h2 className='font-bold mb-0 text-sm lg:text-xl'>
-            KALYANI GOVERNMENT ENGINEERING COLLEGE
-          </h2>
+          <h2 className='font-bold mb-0 text-sm lg:text-xl'>TRAINING AND PLACEMENT CELL</h2>
+          <h2 className='font-bold mb-0 text-sm lg:text-xl'>KALYANI GOVERNMENT ENGINEERING COLLEGE</h2>
         </div>
         <div className='flex items-center justify-center pt-8'>
           <p className='text-center mx-4'>{data.text}</p>
         </div>
         <div className='flex items-center justify-center mt-16'>
           <Link
-            href='/KGEC TNP Cell Brochure for AY 2024-25.pdf' 
-            target='_blank' 
+            href='/KGEC TNP Cell Brochure for AY 2024-25.pdf'
+            target='_blank'
             className=' bg-red-600 text-center text-white font-semibold rounded-lg  p-4 '
-          > 
-          Download Brochure
-          </Link> 
+          >
+            Download Brochure
+          </Link>
         </div>
       </div>
       <Image
         src={bgImg}
         alt='background-image'
         fill={true}
-        className='object-cover z-[-10]' 
+        className='object-cover z-[-10]'
       />
     </div>
   );

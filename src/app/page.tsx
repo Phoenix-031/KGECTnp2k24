@@ -10,18 +10,16 @@ import WhyKGECSection from '@/components/WhyKGECSection';
 
 function Home() {
   return (
-    <main className='custom-scrollbar overflow-y-scroll h-screen  '>
-      <div className='custom-scrollbar'>
-        <Hero />
-        <WhyKGECSection />
-        <FromTnPSection />
-        <TestimonialSection />
-        <PlacementStatistics />
-        <Pastrecruiters />
-        <OurTeam />
-        <Alumni />
-        <Footer />
-      </div>
+    <main>
+      <Hero />
+      <WhyKGECSection />
+      <FromTnPSection />
+      <TestimonialSection />
+      <PlacementStatistics />
+      <Pastrecruiters />
+      <OurTeam />
+      <Alumni />
+      <Footer />
     </main>
   );
 }
