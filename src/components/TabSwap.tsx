@@ -1,46 +1,46 @@
-'use client'
+'use client';
 
-import React from "react";
-import { useState } from "react";
-import PlacementStatisticsUG from "./PlacementStatisticsUG";
-import PlacementStatistics from "./PlacementStatistics";
+import React from 'react';
+import { useState } from 'react';
+import PlacementStatisticsUG from './PlacementStatisticsUG';
+import PlacementStatistics from './PlacementStatistics';
 
-type Tab = "ug" | "pg";
+type Tab = 'ug' | 'pg';
 
 export default function TabsDemo() {
-  const [activeTab, setActiveTab] = useState<Tab>("ug");
+  const [activeTab, setActiveTab] = useState<Tab>('ug');
 
   const handleTabClick = (tab: Tab) => {
     setActiveTab(tab);
   };
 
   return (
-    <div className="w-full mx-auto">
-      <div className="flex items-center justify-center gap-3 m-8">
-        <div className="flex gap-2 p-2 px-4 bg-slate-300 rounded-lg">
+    <div className='w-full mx-auto'>
+      <div className='flex items-center justify-center gap-3 m-8'>
+        <div className='flex gap-2 p-2 px-4 bg-slate-300 rounded-lg'>
           <button
-            className={`flex items-center justify-center px-4 sm:px-[80px] md:pl-[100px] lg:px-[80px] py-2 sm:py-[10px] md:py-[12px] lg:py-[15px] bg-slate-300 text-center text-sm sm:text-base md:text-lg lg:text-xl rounded-lg ${activeTab === "ug" ? "border-b-2 bg-blue-400 border-blue-500 font-semibold" : "text-gray-600"}`}
-            onClick={() => handleTabClick("ug")}
+            className={`flex items-center justify-center px-4 sm:px-[80px] md:pl-[100px] lg:px-[80px] py-2 sm:py-[10px] md:py-[12px] lg:py-[15px] bg-slate-300 text-center text-sm sm:text-base md:text-lg lg:text-xl rounded-lg ${activeTab === 'ug' ? 'border-b-2 bg-blue-400 border-blue-500 font-semibold' : 'text-gray-600'}`}
+            onClick={() => handleTabClick('ug')}
           >
             Post Graduate
           </button>
           <button
-            className={`flex items-center justify-center px-4 sm:px-[80px] md:pl-[100px] lg:px-[80px] py-2 sm:py-[10px] md:py-[12px] lg:py-[15px] bg-slate-300 text-center text-sm sm:text-base md:text-lg lg:text-xl rounded-lg ${activeTab === "pg" ? "border-b-2 bg-blue-400 border-blue-500 font-semibold" : "text-gray-600"}`}
-            onClick={() => handleTabClick("pg")}
+            className={`flex items-center justify-center px-4 sm:px-[80px] md:pl-[100px] lg:px-[80px] py-2 sm:py-[10px] md:py-[12px] lg:py-[15px] bg-slate-300 text-center text-sm sm:text-base md:text-lg lg:text-xl rounded-lg ${activeTab === 'pg' ? 'border-b-2 bg-blue-400 border-blue-500 font-semibold' : 'text-gray-600'}`}
+            onClick={() => handleTabClick('pg')}
           >
             Under Graduate
           </button>
         </div>
       </div>
 
-      <div className="px-4">
-        {activeTab === "ug" && (
+      <div className='px-4'>
+        {activeTab === 'ug' && (
           <div>
             <PlacementStatistics />
           </div>
         )}
 
-        {activeTab === "pg" && (
+        {activeTab === 'pg' && (
           <div>
             <PlacementStatisticsUG />
           </div>
