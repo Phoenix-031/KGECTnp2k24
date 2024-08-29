@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -8,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,9 +18,9 @@ const config = {
       },
     },
     extend: {
-     zIndex:{
-      '-10':'-10'
-     },
+      zIndex: {
+        '-10': '-10',
+      },
       colors: {
         custom: {
           yellow: "#E6C651",
@@ -30,7 +29,7 @@ const config = {
         },
         light_yellow: "#F4CE44",
         'custom-blue': '#0C84AA',
-        'accordian-grey' : '#D9D9D9',
+        'accordian-grey': '#D9D9D9',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -86,7 +85,28 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.custom-scrollbar': {
+          '&::-webkit-scrollbar': {
+            width: '12px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: '#f1f1f1',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#0C84AA', 
+            borderRadius: '20px',
+            border: '3px solid #f1f1f1',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#006494', 
+          },
+        },
+      });
+    },
+  ],
+} satisfies Config;
 
-export default config
+export default config;
