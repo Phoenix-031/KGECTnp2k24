@@ -23,7 +23,7 @@ export const Navbar = () => {
         'p-4',
         'gap-10',
         'flex-col',
-        'z-10',
+        
       ];
     } else {
       menuClasses.push('hidden', 'md:flex');
@@ -34,7 +34,7 @@ export const Navbar = () => {
 
   function getOverlayClasses() {
     return [
-      'fixed',
+      'sticky',
       'top-0',
       'left-0',
       'w-full',
@@ -43,7 +43,7 @@ export const Navbar = () => {
       'bg-opacity-50',
       'transition-opacity',
       'duration-300',
-      'z-50',
+      
       isOpen ? 'opacity-100' : 'opacity-0',
       isOpen ? 'pointer-events-auto' : 'pointer-events-none',
     ].join(' ');
@@ -81,7 +81,7 @@ export const Navbar = () => {
         ref={navbarRef}
         className={`z-50 bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        } `}
       >
         <div className='container flex justify-between items-center'>
           <a
@@ -137,12 +137,12 @@ export const Navbar = () => {
             >
               CONTACT US
             </Link>
-            <Link
+            {/*<Link
               href='/student-details'
               className='mx-3 hover:text-gray-300'
             >
               STUDENT DETAILS
-            </Link>
+            </Link>*/}
             <Link
               href='/signup'
               className='mx-3 hover:text-gray-300 mb-5'
