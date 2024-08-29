@@ -20,9 +20,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+      <div className='custom-scrollbar overflow-y-scroll h-screen '>
         <SpeedInsights />
         <Navbar />
-        {children}
+        {children}</div>
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ export const Navbar = () => {
         'w-1/2',
         'right-0',
         'p-4',
-        'gap-10',
+        'gap-15',
         'flex-col',
       ];
     } else {
@@ -43,7 +43,6 @@ export const Navbar = () => {
       'bg-opacity-50',
       'transition-opacity',
       'duration-300',
-
       isOpen ? 'opacity-100' : 'opacity-0',
       isOpen ? 'pointer-events-auto' : 'pointer-events-none',
     ].join(' ');
@@ -73,21 +72,17 @@ export const Navbar = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  1;
 
   return (
     <>
       <nav
         ref={navbarRef}
-        className={` bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
+        className={`bg-custom-blue text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        } `}
+        }`}
       >
         <div className='container flex justify-between items-center'>
-          <a
-            href='#'
-            className='text-2xl font-bold ml-[-14px]'
-          >
+          <a href='#' className='text-2xl font-bold ml-[-14px]'>
             <Image
               alt='Navbar Logo'
               src={'/kgec.svg'}
@@ -95,65 +90,35 @@ export const Navbar = () => {
               height={40}
             />
           </a>
-          <div className={`${getMenuClasses()} pl-4`}>
-            <Link
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+          <div className={`${getMenuClasses()} pl-4 gap-5`}>
+            <Link href='/' className='hover:text-gray-300'>
               HOME
             </Link>
-            <Link
-              onClick={() => scrollToSection('')}
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+            <Link onClick={() => scrollToSection('')} href='/' className='hover:text-gray-300'>
               WHY RECRUIT US
             </Link>
-            <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+            <Link onClick={() => scrollToSection('placement-statistics')} href='/' className='hover:text-gray-300'>
               FROM T&P CELL
             </Link>
-            <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+            <Link onClick={() => scrollToSection('placement-statistics')} href='/' className='hover:text-gray-300'>
               PLACEMENT STATISTICS
             </Link>
-            <Link
-              onClick={() => scrollToSection('past-recruiters')}
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+            <Link onClick={() => scrollToSection('past-recruiters')} href='/' className='hover:text-gray-300'>
               PAST RECRUITERS
             </Link>
-            <Link
-              onClick={() => scrollToSection('contact-us')}
-              href='/'
-              className='mx-3 hover:text-gray-300'
-            >
+            <Link onClick={() => scrollToSection('contact-us')} href='/' className='hover:text-gray-300'>
               CONTACT US
             </Link>
-            {/*<Link
-              href='/student-details'
-              className='mx-3 hover:text-gray-300'
-            >
-              STUDENT DETAILS
-            </Link>*/}
-            <Link
-              href='/signup'
-              className='mx-3 hover:text-gray-300 mb-5'
-            >
+            <Link href='/signup' className='hover:text-gray-300'>
               STUDENT LOGIN
             </Link>
           </div>
           <div className='md:hidden flex items-center mr-[-14px]'>
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
-                className='hamburger-menu'
+                className={`transition-transform duration-300 ${
+                  isOpen ? 'rotate-90 scale-down' : 'rotate-neg-90 scale-up'
+                }`}
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
@@ -183,10 +148,7 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div
-        className={getOverlayClasses()}
-        onClick={() => setIsOpen(false)}
-      ></div>
+      <div className={getOverlayClasses()} onClick={() => setIsOpen(false)}></div>
     </>
   );
 };
