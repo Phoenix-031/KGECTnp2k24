@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -8,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -16,15 +15,12 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-        "lg": "1020px",
-        "md": "800px",
-        "sm": "750px",
       },
     },
     extend: {
-     zIndex:{
-      '-10':'-10'
-     },
+      zIndex: {
+        '-10': '-10',
+      },
       colors: {
         custom: {
           yellow: "#E6C651",
@@ -33,7 +29,7 @@ const config = {
         },
         light_yellow: "#F4CE44",
         'custom-blue': '#0C84AA',
-        'accordian-grey' : '#D9D9D9',
+        'accordian-grey': '#D9D9D9',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -89,7 +85,8 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+  ],
+} satisfies Config;
 
-export default config
+export default config;

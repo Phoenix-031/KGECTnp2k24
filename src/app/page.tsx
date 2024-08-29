@@ -4,18 +4,18 @@ import FromTnPSection from '@/components/FromTNPSection';
 import Hero from '@/components/Hero';
 import OurTeam from '@/components/OurTeam';
 import Pastrecruiters from '@/components/Pastrecruiters';
-import PlacementStatistics from '@/components/PlacementStatistics';
+import TabSwap from '@/components/TabSwap';
 import TestimonialSection from '@/components/TestimonialSection';
 import WhyKGECSection from '@/components/WhyKGECSection';
 
 function Home() {
   return (
-    <main className='w-full overflow-x-hidden'>
+    <main>
       <Hero />
       <WhyKGECSection />
       <FromTnPSection />
       <TestimonialSection />
-      <PlacementStatistics />
+      <TabSwap />
       <Pastrecruiters />
       <OurTeam />
       <Alumni />
