@@ -1,6 +1,6 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 
 @layer base {
   :root {
@@ -66,4 +66,56 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes rotate-90 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate-neg-90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.rotate-90 {
+  animation: rotate-90 0.3s ease-out forwards;
+}
+
+.rotate-neg-90 {
+  animation: rotate-neg-90 0.3s ease-out forwards;
+}
+
+.scale-down {
+  animation: scale-down 0.3s ease-out forwards;
+}
+
+.scale-up {
+  animation: scale-up 0.3s ease-out forwards;
 }

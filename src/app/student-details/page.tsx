@@ -80,7 +80,7 @@ const page = () => {
           </div>
         ))}
       </div>
-      <div className='gap-2 w-full grid grid-cols-5 row-auto'>
+      <div className='gap-2 w-full grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 row-auto'>
         {students.map((student, index) => (
           <StudentCard
             key={index}
