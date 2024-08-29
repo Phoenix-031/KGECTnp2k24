@@ -12,7 +12,7 @@ const Alumni = () => {
         corporate fronts. Meet some of our alumni who we are proud of producing.
       </p>
       <div className='mb-10 w-full flex flex-col justify-center items-center'>
-        <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 row-auto'>
+        <div className='w-[70vw] flex flex-wrap justify-center items-center gap-4 row-auto'>
           {a.map((item, index) => {
             return (
               <div

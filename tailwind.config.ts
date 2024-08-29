@@ -14,15 +14,16 @@ const config = {
       center: true,
       padding: '2rem',
       screens: {
-        'xl' : '1100',
         '2xl': '1400px',
-        'lg': '1020px',
-        'md': '800px',
-        'sm': '750px',
+        lg: '1020px',
+        md: '800px',
+        sm: '750px',
       },
     },
     extend: {
-      
+      blur: {
+        'sm': '3px',
+      },
       zIndex: {
         '-10': '-10',
       },
@@ -100,28 +101,7 @@ const config = {
       },
     }, 
   },
-  plugins: [
-function ({ addUtilities }) {
-      addUtilities({
-        '.custom-scrollbar': {
-          '&::-webkit-scrollbar': {
-            width: '12px',
-          },
-          '&::-webkit-scrollbar-track': {
-            background: '#f1f1f1',
-          },
-          '&::-webkit-scrollbar-thumb': {
-            backgroundColor: '#0C84AA',
-            borderRadius: '20px',
-            border: '3px solid #f1f1f1',
-          },
-          '&::-webkit-scrollbar-thumb:hover': {
-            backgroundColor: '#006494',
-          },
-        },
-      });
-    },
-  ],
+  plugins: [require('tailwindcss-animate')],
 } satisfies Config;
 
 export default config;
