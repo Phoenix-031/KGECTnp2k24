@@ -5,22 +5,24 @@ import { heroSlides } from '@/assets/images/slides';
 
 const Hero = () => {
   return (
-    <div className='w-[100%]'>
+    <div className='w-[100%] relative'>
       <ImageCar images={heroSlides} />
-      <div className='top-[25vh] absolute gap-4 flex flex-col justify-center items-center w-full'>
+      <div className='top-[25vh] gap-4 flex flex-col justify-center items-center w-full absolute -translate-y-8'>
         <div className='w-20 sm:w-20 md:w-28 lg:w-40 gap-8 flex flex-row items-center justify-center '>
           <Image
             src={Image1}
             alt='TNP LOGO'
             className='w-[125px]'
+            layout='responsive'
           />
           <Image
             src={Image2}
             alt='KGEC LOGO'
             className='w-[125px]'
+            layout='responsive'
           />
         </div>
-        <div className='flex flex-col justify-center items-center '>
+        <div className='flex flex-col justify-center items-center'>
           <div className='flex flex-col items-center justify-center'>
             <h2 className='font-bold  text-xs sm:text-sm md:text-md lg:text-xl text-center'>
               TRAINING AND PLACEMENT CELL
