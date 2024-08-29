@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import 'tailwindcss/tailwind.css';
-import { st } from '@/assets/images/students';
-import { ts } from '@/assets/images/teacher';
+import { placementCoordinators } from '@/data/placement-coordinators';
+import { teachersData } from '@/data/teachers';
+
 import { FaLinkedin } from 'react-icons/fa';
 const OurTeam = () => {
   return (
@@ -16,7 +17,7 @@ const OurTeam = () => {
         </p>
         <p className='font-light text-center text-3xl p-10 pt-0'>Associate Teacher Training and Placements</p>
         <div className=' w-full flex flex-row flex-wrap justify-center items-center h-fit gap-10'>
-          {ts.map((item, index) => {
+          {teachersData.map((item, index) => {
             return (
               <div
                 key={index}
@@ -53,7 +54,7 @@ const OurTeam = () => {
       <div>
         <p className='font-light text-center text-3xl p-10'>Student Placement Coordinators — Y&apos;25</p>
         <div className='w-full flex flex-row flex-wrap justify-center items-center h-fit gap-10'>
-          {st.map((item, index) => {
+          {placementCoordinators.map((item, index) => {
             return (
               <div
                 className='relative group flex flex-col items-center'

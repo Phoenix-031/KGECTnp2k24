@@ -1,5 +1,3 @@
-// import { "../assets/images/student-photo.jpeg" } from '@/assets/images';
-
 export const students = [
   {
     photo: '../../assets/images/student-photo.jpeg',
