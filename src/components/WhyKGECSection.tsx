@@ -1,5 +1,5 @@
-import { whyKgecData } from "@/data/sectionData";
-import Image from "next/image";
+import { whyKgecData } from '@/data/sectionData';
+import Image from 'next/image';
 
 const WhyKGECSection = () => {
   return (
