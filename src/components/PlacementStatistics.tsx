@@ -37,7 +37,7 @@ const PlacementStatistics = () => {
               <AccordionTrigger className='flex items-center justify-between p-4 bg-accordian-grey rounded-lg cursor-pointer hover:bg-gray-300 transition'>
                 <span className='text-gray-800'>Year {yearData.year}</span>
               </AccordionTrigger>
-              <AccordionContent className='w-full lg:px-80 lg:py-16 mt-6 bg-accordian-grey rounded-lg flex flex-col items-center justify-center'>
+              <AccordionContent className='w-full lg:py-16 mt-6 bg-accordian-grey rounded-lg flex flex-col items-center justify-center'>
                 <div className='w-full h-full'>
                   <PlacementTable year={yearData.year} />
                 </div>
