@@ -2,7 +2,12 @@ import type { Config } from 'tailwindcss';
 
 const config = {
   darkMode: ['class'],
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
   prefix: '',
   theme: {
     container: {
@@ -71,20 +76,30 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+        'rotate-90': {
+          '0%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(0deg)' },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+        'rotate-neg-90': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(180deg)' },
+        },
+        'scale-down': {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        'scale-up': {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        'rotate-90': 'rotate-90 0.3s ease-out forwards',
+        'rotate-neg-90': 'rotate-neg-90 0.3s ease-out forwards',
+        'scale-down': 'scale-down 0.3s ease-out forwards',
+        'scale-up': 'scale-up 0.3s ease-out forwards',
       },
-    },
+    }, 
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
