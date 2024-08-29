@@ -86,7 +86,6 @@
   }
 }
 
-
 @keyframes scale-down {
   0% {
     transform: scale(0);
@@ -104,7 +103,6 @@
     transform: scale(0);
   }
 }
-
 
 .rotate-90 {
   animation: rotate-90 0.3s ease-out forwards;
