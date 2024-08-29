@@ -21,9 +21,8 @@ export const Navbar = () => {
         'w-1/2',
         'right-0',
         'p-4',
-        'gap-10',
+        'gap-15',
         'flex-col',
-        'z-10',
       ];
     } else {
       menuClasses.push('hidden', 'md:flex');
@@ -36,6 +35,7 @@ export const Navbar = () => {
     return [
       'fixed',
       'top-0',
+      'z-40',
       'left-0',
       'w-full',
       'h-full',
@@ -43,7 +43,6 @@ export const Navbar = () => {
       'bg-opacity-50',
       'transition-opacity',
       'duration-300',
-      'z-50',
       isOpen ? 'opacity-100' : 'opacity-0',
       isOpen ? 'pointer-events-auto' : 'pointer-events-none',
     ].join(' ');
@@ -73,13 +72,12 @@ export const Navbar = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  1;
 
   return (
     <>
       <nav
         ref={navbarRef}
-        className={`z-50 bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
+        className={`bg-custom-blue text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -95,57 +93,51 @@ export const Navbar = () => {
               height={40}
             />
           </a>
-          <div className={`${getMenuClasses()} pl-4`}>
+          <div className={`${getMenuClasses()} pl-4 gap-5`}>
             <Link
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               HOME
             </Link>
             <Link
               onClick={() => scrollToSection('')}
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               WHY RECRUIT US
             </Link>
             <Link
               onClick={() => scrollToSection('placement-statistics')}
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               FROM T&P CELL
             </Link>
             <Link
               onClick={() => scrollToSection('placement-statistics')}
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               PLACEMENT STATISTICS
             </Link>
             <Link
               onClick={() => scrollToSection('past-recruiters')}
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               PAST RECRUITERS
             </Link>
             <Link
               onClick={() => scrollToSection('contact-us')}
               href='/'
-              className='mx-3 hover:text-gray-300'
+              className='hover:text-gray-300'
             >
               CONTACT US
             </Link>
             <Link
-              href='/student-details'
-              className='mx-3 hover:text-gray-300'
-            >
-              STUDENT DETAILS
-            </Link>
-            <Link
               href='/signup'
-              className='mx-3 hover:text-gray-300 mb-5'
+              className='hover:text-gray-300'
             >
               STUDENT LOGIN
             </Link>
@@ -153,7 +145,9 @@ export const Navbar = () => {
           <div className='md:hidden flex items-center mr-[-14px]'>
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
-                className='hamburger-menu'
+                className={`transition-transform duration-300 ${
+                  isOpen ? 'rotate-90 scale-down' : 'rotate-neg-90 scale-up'
+                }`}
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'

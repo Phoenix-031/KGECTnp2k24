@@ -3,6 +3,7 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 import { st } from '@/assets/images/students';
 import { ts } from '@/assets/images/teacher';
+import { FaLinkedin } from 'react-icons/fa';
 const OurTeam = () => {
   return (
     <div className='flex flex-col justify-center items-center min-s-screen '>
@@ -38,13 +39,7 @@ const OurTeam = () => {
                   </div>
 
                   <div className='absolute inset-0 flex items-center justify-center bg-blue-500 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity rounded-full'>
-                    <Image
-                      src='./linkedin.svg'
-                      alt='LinkedIn'
-                      width={40}
-                      height={40}
-                      className='text-white'
-                    />
+                    <FaLinkedin className='w-[40px] h-[40px] text-blue-600' />
                   </div>
                 </a>
                 <p className='font-medium'>{item.name}</p>
@@ -76,13 +71,7 @@ const OurTeam = () => {
                     className='object-cover sm:w-48 sm:h-48 w-52 h-52 rounded-full'
                   />
                   <div className='absolute inset-0 flex items-center justify-center bg-blue-500 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity rounded-full'>
-                    <Image
-                      src='./linkedin.svg'
-                      alt='LinkedIn'
-                      width={40}
-                      height={40}
-                      className='text-white'
-                    />
+                    <FaLinkedin className='w-[40px] h-[40px] text-blue-600' />
                   </div>
                 </a>
                 <p className='font-medium'>{item.name}</p>
