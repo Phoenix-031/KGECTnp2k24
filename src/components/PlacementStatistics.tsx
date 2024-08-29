@@ -22,6 +22,7 @@ const PlacementStatistics = () => {
           className='gap-4 items-center'
           type='single'
           collapsible
+          defaultValue={years[years.length - 1].year}
         >
           {years.map((yearData) => (
             <AccordionItem
