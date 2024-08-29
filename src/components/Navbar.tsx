@@ -33,8 +33,9 @@ export const Navbar = () => {
 
   function getOverlayClasses() {
     return [
-      'sticky',
+      'fixed',
       'top-0',
+      'z-40',
       'left-0',
       'w-full',
       'h-full',
@@ -78,7 +79,7 @@ export const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className={`z-50 bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
+        className={` bg-custom-blue text-white font-semibold text-sm py-4 sm:p-6 md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } `}
       >

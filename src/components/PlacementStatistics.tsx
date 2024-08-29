@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/accordion';
 import { PieCharts } from './PieChart';
 import { BarCharts } from './BarCharts';
@@ -10,6 +10,9 @@ import data from '../data/data.json';
 
 const PlacementStatistics = () => {
   const years = data.years;
+
+  // Set the initial state to open the first item
+  const [openYear, setOpenYear] = useState(years[0].year);
 
   return (
     <div
@@ -22,6 +25,8 @@ const PlacementStatistics = () => {
           className='gap-4 items-center'
           type='single'
           collapsible
+          value={openYear}
+          onValueChange={setOpenYear}
         >
           {years.map((yearData) => (
             <AccordionItem
@@ -29,10 +34,14 @@ const PlacementStatistics = () => {
               value={yearData.year}
               className='mb-4'
             >
-              <AccordionTrigger className='flex items-center justify-between p-4 bg-accordian-grey rounded-lg cursor-pointer hover:no-underline hover:bg-gray-300 transition'>
+              <AccordionTrigger
+                className='flex items-center justify-between p-4 bg-accordian-grey rounded-lg cursor-pointer hover:bg-gray-300 transition'
+              >
                 <span className='text-gray-800'>Year {yearData.year}</span>
               </AccordionTrigger>
-              <AccordionContent className='w-full lg:px-80 lg:py-16 mt-6 bg-accordian-grey rounded-lg flex flex-col items-center justify-center'>
+              <AccordionContent
+                className='w-full lg:px-80 lg:py-16 mt-6 bg-accordian-grey rounded-lg flex flex-col items-center justify-center'
+              >
                 <div className='w-full h-full'>
                   <PlacementTable year={yearData.year} />
                 </div>
