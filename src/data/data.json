@@ -58,6 +58,7 @@
       ]
     }
   ],
+
   "desktop_data": [
     { "department": "CSE", "desktop": 186, "fill": "var(--color-CSE)" },
     { "department": "IT", "desktop": 305, "fill": "var(--color-IT)" },
