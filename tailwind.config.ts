@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-const config: Config = {
+const config = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -98,10 +98,10 @@ const config: Config = {
         'scale-down': 'scale-down 0.3s ease-out forwards',
         'scale-up': 'scale-up 0.3s ease-out forwards',
       },
-    },
+    }, 
   },
   plugins: [
-    function ({ addUtilities }) {
+function ({ addUtilities }) {
       addUtilities({
         '.custom-scrollbar': {
           '&::-webkit-scrollbar': {
@@ -122,6 +122,6 @@ const config: Config = {
       });
     },
   ],
-};
+} satisfies Config;
 
 export default config;
