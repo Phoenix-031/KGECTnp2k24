@@ -73,22 +73,22 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        'rotate-90': {
-          '0%': { transform: 'rotate(180deg)' },
-          '100%': { transform: 'rotate(0deg)' },
-        },
-        'rotate-neg-90': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(180deg)' },
-        },
-        'scale-down': {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
-        },
-        'scale-up': {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
-        },
+        // 'rotate-90': {
+        //   '0%': { transform: 'rotate(90deg)' },
+        //   '100%': { transform: 'rotate(0deg)' },
+        // },
+        // 'rotate-neg-90': {
+        //   '0%': { transform: 'rotate(0deg)' },
+        //   '100%': { transform: 'rotate(-90deg)' },
+        // },
+        // 'scale-down': {
+        //   '0%': { transform: 'scale(1)' },
+        //   '100%': { transform: 'scale(1)' },
+        // },
+        // 'scale-up': {
+        //   '0%': { transform: 'scale(1)' },
+        //   '100%': { transform: 'scale(1)' },
+        // },
       },
       animation: {
         'rotate-90': 'rotate-90 0.3s ease-out forwards',

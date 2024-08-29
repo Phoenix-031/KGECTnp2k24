@@ -3,7 +3,10 @@ import { faculties } from '@/data/fromTNP';
 
 const FromTnPSection = () => {
   return (
-    <section className='py-12 bg-white flex flex-col justify-center items-center'>
+    <section
+      className='py-12 bg-white flex flex-col justify-center items-center'
+      id='tnp'
+    >
       <div className='mx-5 px-4'>
         <h2 className='text-3xl font-bold text-center mb-8'>From TnP</h2>
         <div className='w-[90vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
