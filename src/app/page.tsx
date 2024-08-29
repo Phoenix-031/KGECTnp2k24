@@ -1,5 +1,4 @@
 import Alumni from '@/components/Alumni';
-// import Contactinfo from '@/components/Contactinfo';
 import Footer from '@/components/Footer';
 import FromTnPSection from '@/components/FromTNPSection';
 import Hero from '@/components/Hero';
@@ -9,7 +8,7 @@ import PlacementStatistics from '@/components/PlacementStatistics';
 import TestimonialSection from '@/components/TestimonialSection';
 import WhyKGECSection from '@/components/WhyKGECSection';
 
-export default function Home() {
+function Home() {
   return (
     <main className='custom-scrollbar overflow-y-scroll h-screen  '>
       <div className='custom-scrollbar'>
@@ -26,3 +25,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;

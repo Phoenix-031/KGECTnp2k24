@@ -1,28 +1,14 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { SectionData } from '../components/types';
+import { whyKgecData } from "@/data/sectionData";
+import Image from "next/image";
 
 const WhyKGECSection = () => {
-  const [sectionData, setSectionData] = useState<SectionData | null>(null);
-
-  useEffect(() => {
-    fetch('/sectionData.json')
-      .then((response) => response.json())
-      .then((data) => setSectionData(data))
-      .catch((error) => console.error('Error fetching section data:', error));
-  }, []);
-
-  if (!sectionData) return null;
-
   return (
     <section className='py-12 bg-custom-yellow max-w-screen'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-3xl font-bold text-center mb-8'>{sectionData.title}</h2>
-        <p className='text-center mb-8'>{sectionData.description}</p>
+        <h2 className='text-3xl font-bold text-center mb-8'>{whyKgecData.title}</h2>
+        <p className='text-center mb-8'>{whyKgecData.description}</p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {sectionData.logos.map((logo, index) => (
+          {whyKgecData.logos.map((logo, index) => (
             <div
               key={index}
               className='text-center'

@@ -8,18 +8,18 @@ export const st = [
     name: 'Sarnavo Saha Sarder',
     image: group1,
     linkedin: 'https://www.linkedin.com/in/sarnavo/',
-    designation: 'Additional Cheif Training & Placement Representative (Placement)',
+    designation: 'Additional Chief Training & Placement Representative (Placement)',
   },
   {
     name: 'Rekden Lama',
     image: group2,
     linkedin: 'https://www.linkedin.com/in/rekden-lama/',
-    designation: 'Cheif Training & Placement Representative',
+    designation: 'Chief Training & Placement Representative',
   },
   {
     name: 'Subhadeep Das',
     image: group3,
     linkedin: 'https://www.linkedin.com/in/subhadeepdas06/',
-    designation: 'Additional Cheif Training & Placement Representative (Internship & Training)',
+    designation: 'Additional Chief Training & Placement Representative (Internship & Training)',
   },
 ];
