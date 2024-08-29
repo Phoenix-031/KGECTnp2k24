@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -20,18 +19,14 @@ export const Navbar = () => {
         'top-[60px]',
         'bg-custom-blue',
         'w-1/2',
-        'right-0', 
+        'right-0',
         'p-4',
         'gap-15',
         'flex-col',
-        'animate-slide-down'
+        'animate-slide-down',
       ];
     } else {
-      menuClasses = [
-        'hidden',
-        'md:flex',
-        'animate-slide-up'
-      ];
+      menuClasses = ['hidden', 'md:flex', 'animate-slide-up'];
     }
 
     return menuClasses.join(' ');
@@ -72,13 +67,15 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
-  {/* const scrollToSection = (sectionId: string) => {
+  {
+    /* const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-*/}
+*/
+  }
 
   const handleLinkClick = () => {
     // Close the menu when a link is clicked
@@ -114,7 +111,6 @@ export const Navbar = () => {
               HOME
             </Link>
             <Link
-              
               href='#whykgec'
               className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
               onClick={handleLinkClick}
@@ -122,15 +118,13 @@ export const Navbar = () => {
               WHY RECRUIT US
             </Link>
             <Link
-              
               href='#tnp'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base' 
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
               onClick={handleLinkClick}
             >
               FROM T&P CELL
             </Link>
             <Link
-              
               href='#placement-statistics'
               className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
               onClick={handleLinkClick}
@@ -138,7 +132,6 @@ export const Navbar = () => {
               PLACEMENT STATISTICS
             </Link>
             <Link
-              
               href='#past-recruiters'
               className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
               onClick={handleLinkClick}
@@ -146,7 +139,6 @@ export const Navbar = () => {
               PAST RECRUITERS
             </Link>
             <Link
-              
               href='#contacts'
               className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
               onClick={handleLinkClick}

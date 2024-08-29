@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 const WhyKGECSection = () => {
   return (
-    <section className='py-12 bg-custom-yellow max-w-screen' id='whykgec'>
+    <section
+      className='py-12 bg-custom-yellow max-w-screen'
+      id='whykgec'
+    >
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold text-center mb-8'>{whyKgecData.title}</h2>
         <p className='text-center mb-8'>{whyKgecData.description}</p>

@@ -36,10 +36,7 @@ export function BarChartHorizontal() {
             layout='vertical'
             margin={{
               right: 16,
-              
             }}
-          
-          
           >
             <CartesianGrid horizontal={true} />
             <YAxis
@@ -50,7 +47,6 @@ export function BarChartHorizontal() {
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
               hide
-
             />
             <XAxis
               dataKey='desktop'
@@ -61,13 +57,12 @@ export function BarChartHorizontal() {
               cursor={false}
               content={<ChartTooltipContent indicator='line' />}
             />
-            
+
             <Bar
               dataKey='desktop'
               fill='var(--color-desktop)'
               radius={4}
               name={chartConfig.desktop.label}
-             
             >
               <LabelList
                 dataKey='desktop'
@@ -82,16 +77,14 @@ export function BarChartHorizontal() {
                 offset={8}
                 className='fill-foreground'
                 fontSize={12}
-          
               />
             </Bar>
-            
+
             <Bar
               dataKey='mobile'
               fill='var(--color-mobile)'
               radius={4}
               name={chartConfig.mobile.label}
-            
             >
               <LabelList
                 dataKey='mobile'
@@ -108,7 +101,6 @@ export function BarChartHorizontal() {
                 fontSize={12}
               />
             </Bar>
-            
           </BarChart>
         </ChartContainer>
       </CardContent>

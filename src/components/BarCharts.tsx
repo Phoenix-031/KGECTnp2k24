@@ -33,7 +33,7 @@ export function BarCharts() {
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="department"
+              dataKey='department'
               tickLine={false}
               tickMargin={10}
               axisLine={false}
@@ -41,14 +41,21 @@ export function BarCharts() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="dashed" />}
+              content={<ChartTooltipContent indicator='dashed' />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+            <Bar
+              dataKey='desktop'
+              fill='var(--color-desktop)'
+              radius={4}
+            />
+            <Bar
+              dataKey='mobile'
+              fill='var(--color-mobile)'
+              radius={4}
+            />
           </BarChart>
         </ChartContainer>
       </CardContent>
-      
     </Card>
   );
 }
