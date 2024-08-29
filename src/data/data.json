@@ -58,25 +58,27 @@
       ]
     }
   ],
-  "desktop_data": [
-    { "department": "CSE", "desktop": 186, "fill": "var(--color-CSE)" },
-    { "department": "IT", "desktop": 305, "fill": "var(--color-IT)" },
-    { "department": "ECE", "desktop": 237, "fill": "var(--color-ECE)" },
-    { "department": "EE", "desktop": 173, "fill": "var(--color-EE)" },
-    { "department": "ME", "desktop": 209, "fill": "var(--color-ME)" }
-  ],
-  "desktop_data_alternative": [
-    { "department": "CSE", "desktop": 186 },
-    { "department": "IT", "desktop": 305 },
-    { "department": "ECE", "desktop": 237 },
-    { "department": "EE", "desktop": 73 },
-    { "department": "ME", "desktop": 209 }
-  ],
-  "desktop_and_mobile_data": [
-    { "department": "CSE", "desktop": 200, "mobile": 80 },
-    { "department": "IT", "desktop": 305, "mobile": 200 },
-    { "department": "ECE", "desktop": 237, "mobile": 120 },
-    { "department": "EE", "desktop": 73, "mobile": 190 },
-    { "department": "ME", "desktop": 209, "mobile": 130 }
-  ]
-}
+  
+    "desktop_data": [
+      { "department": "CSE", "desktop": 186, "fill": "var(--color-CSE)" },
+      { "department": "IT", "desktop": 305, "fill": "var(--color-IT)" },
+      { "department": "ECE", "desktop": 237, "fill": "var(--color-ECE)" },
+      { "department": "EE", "desktop": 173, "fill": "var(--color-EE)" },
+      { "department": "ME", "desktop": 209, "fill": "var(--color-ME)" }
+    ],
+    "desktop_data_alternative": [
+      { "department": "CSE", "desktop": 186 },
+      { "department": "IT", "desktop": 305 },
+      { "department": "ECE", "desktop": 237 },
+      { "department": "EE", "desktop": 73 },
+      { "department": "ME", "desktop": 209 }
+    ],
+    "desktop_and_mobile_data": [
+      { "department": "CSE", "desktop": 200, "mobile": 80 },
+      { "department": "IT", "desktop": 305, "mobile": 200 },
+      { "department": "ECE", "desktop": 237, "mobile": 120 },
+      { "department": "EE", "desktop": 73, "mobile": 190 },
+      { "department": "ME", "desktop": 209, "mobile": 130 }
+    ]
+  }
+  

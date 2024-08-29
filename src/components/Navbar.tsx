@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -19,13 +20,18 @@ export const Navbar = () => {
         'top-[60px]',
         'bg-custom-blue',
         'w-1/2',
-        'right-0',
+        'right-0', 
         'p-4',
         'gap-15',
         'flex-col',
+        'animate-slide-down'
       ];
     } else {
-      menuClasses.push('hidden', 'md:flex');
+      menuClasses = [
+        'hidden',
+        'md:flex',
+        'animate-slide-up'
+      ];
     }
 
     return menuClasses.join(' ');
@@ -66,18 +72,24 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
-  const scrollToSection = (sectionId: string) => {
+  {/* const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+*/}
+
+  const handleLinkClick = () => {
+    // Close the menu when a link is clicked
+    setIsOpen(false);
   };
 
   return (
     <>
       <nav
         ref={navbarRef}
-        className={`bg-custom-blue text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
+        className={`bg-custom-blue text-white font-semibold p-4 md:text-xs md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -96,48 +108,55 @@ export const Navbar = () => {
           <div className={`${getMenuClasses()} pl-4 gap-5`}>
             <Link
               href='/'
-              className='hover:text-gray-300'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               HOME
             </Link>
             <Link
-              onClick={() => scrollToSection('')}
-              href='/'
-              className='hover:text-gray-300'
+              
+              href='#whykgec'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               WHY RECRUIT US
             </Link>
             <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='hover:text-gray-300'
+              
+              href='#tnp'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base' 
+              onClick={handleLinkClick}
             >
               FROM T&P CELL
             </Link>
             <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='hover:text-gray-300'
+              
+              href='#placement-statistics'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               PLACEMENT STATISTICS
             </Link>
             <Link
-              onClick={() => scrollToSection('past-recruiters')}
-              href='/'
-              className='hover:text-gray-300'
+              
+              href='#past-recruiters'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               PAST RECRUITERS
             </Link>
             <Link
-              onClick={() => scrollToSection('contact-us')}
-              href='/'
-              className='hover:text-gray-300'
+              
+              href='#contacts'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               CONTACT US
             </Link>
             <Link
               href='/signup'
-              className='hover:text-gray-300'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               STUDENT LOGIN
             </Link>
