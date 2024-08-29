@@ -59,14 +59,14 @@ const OurTeam = () => {
           {placementCoordinators.map((item, index) => {
             return (
               <div
-                className='relative group flex flex-col items-center'
+                className='relative group flex flex-col items-center h-[20rem] gap-2'
                 key={index}
               >
                 <a
                   href={item.linkedin}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='relative'
+                  className='relative w-full flex justify-center items-center'
                 >
                   <Image
                     src={item.image}
@@ -77,8 +77,10 @@ const OurTeam = () => {
                     <FaLinkedin className='w-[40px] h-[40px] text-blue-600' />
                   </div>
                 </a>
-                <p className='font-medium'>{item.name}</p>
-                <p className='italic text-center text-balance  font-light w-64'>{item.designation}</p>
+                <div className='flex flex-col justify-start items-center'>
+                  <p className='font-medium'>{item.name}</p>
+                  <p className='italic text-center text-balance  font-light w-64'>{item.designation}</p>
+                </div>
               </div>
             );
           })}
