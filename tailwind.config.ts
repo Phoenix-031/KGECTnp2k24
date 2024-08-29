@@ -2,12 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
@@ -15,14 +10,16 @@ const config = {
       padding: '2rem',
       screens: {
         '2xl': '1400px',
-        lg: '1020px',
+        xl: '1280px',
+        lg: '1024px',
         md: '800px',
-        sm: '750px',
+        sm: '768px',
+        xs: '640px',
       },
     },
     extend: {
       blur: {
-        'sm': '3px',
+        sm: '3px',
       },
       zIndex: {
         '-10': '-10',
@@ -99,7 +96,7 @@ const config = {
         'scale-down': 'scale-down 0.3s ease-out forwards',
         'scale-up': 'scale-up 0.3s ease-out forwards',
       },
-    }, 
+    },
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
