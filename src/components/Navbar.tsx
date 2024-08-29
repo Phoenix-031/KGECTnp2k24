@@ -23,7 +23,6 @@ export const Navbar = () => {
         'p-4',
         'gap-10',
         'flex-col',
-        
       ];
     } else {
       menuClasses.push('hidden', 'md:flex');
@@ -43,7 +42,7 @@ export const Navbar = () => {
       'bg-opacity-50',
       'transition-opacity',
       'duration-300',
-      
+
       isOpen ? 'opacity-100' : 'opacity-0',
       isOpen ? 'pointer-events-auto' : 'pointer-events-none',
     ].join(' ');
