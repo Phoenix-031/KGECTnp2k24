@@ -1,8 +1,9 @@
-import group1 from './DRSOURABHKRDAS.png';
-import group2 from './/PROFMRINALKANTIKUMAR.png';
+import group1 from '@/assets/images/teacher/DRSOURABHKRDAS.png';
+import group2 from '@/assets/images/teacher/PROFMRINALKANTIKUMAR.png';
 
-export { group1, group2 };
-export const ts = [
+// export { group1, group2 };
+
+export const teachersData = [
   {
     name: 'DR. SOURABH KR. DAS',
     image: group1,
