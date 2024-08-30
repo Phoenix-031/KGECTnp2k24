@@ -37,7 +37,7 @@ const Hero = () => {
             </p> */}
           </div>
         </div>
-        <button className='w-[230px] text-sm sm:text-sm md:text-md h-[50px] bg-red-600 text-center text-white font-semibold rounded-lg p-2'>
+        <button className='w-[230px] text-sm sm:text-sm md:text-md h-[50px] bg-[#708B67] text-center text-white font-semibold rounded-lg p-2'>
           DOWNLOAD BROCHURE
         </button>
       </div>

@@ -57,7 +57,7 @@ export function PieCharts() {
   return (
     <Card
       data-chart={id}
-      className='flex flex-col bg-accordian-grey border-none'
+      className='flex flex-col bg-[#B2C1AD] border-none'
     >
       <ChartStyle
         id={id}

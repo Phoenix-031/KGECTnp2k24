@@ -20,7 +20,7 @@ const chartConfig = {
 
 export function BarCharts() {
   return (
-    <Card className='bg-accordian-grey border-none'>
+    <Card className='bg-[#B2C1AD] border-none'>
       <CardHeader>
         <CardTitle></CardTitle>
         <CardDescription></CardDescription>

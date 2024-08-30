@@ -12,7 +12,7 @@ import WhyKGECSection from '@/components/WhyKGECSection';
 
 function Home() {
   return (
-    <main>
+    <main className='bg-[#ECDFCC] w-full overflow-x-hidden opacity-0.2'>
       <Hero />
       <WhyKGECSection />
       <FromTnPSection />
