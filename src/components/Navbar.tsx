@@ -23,9 +23,10 @@ export const Navbar = () => {
         'p-4',
         'gap-15',
         'flex-col',
+        'animate-slide-down',
       ];
     } else {
-      menuClasses.push('hidden', 'md:flex');
+      menuClasses = ['hidden', 'md:flex', 'animate-slide-up'];
     }
 
     return menuClasses.join(' ');
@@ -66,11 +67,19 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
-  const scrollToSection = (sectionId: string) => {
+  {
+    /* const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+*/
+  }
+
+  const handleLinkClick = () => {
+    // Close the menu when a link is clicked
+    setIsOpen(false);
   };
 
   return (
@@ -96,48 +105,50 @@ export const Navbar = () => {
           <div className={`${getMenuClasses()} pl-4 gap-5`}>
             <Link
               href='/'
-              className='hover:text-gray-300'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               HOME
             </Link>
             <Link
-              onClick={() => scrollToSection('')}
-              href='/'
-              className='hover:text-gray-300'
+              href='#whykgec'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               WHY RECRUIT US
             </Link>
             <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='hover:text-gray-300'
+              href='#tnp'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               FROM T&P CELL
             </Link>
             <Link
-              onClick={() => scrollToSection('placement-statistics')}
-              href='/'
-              className='hover:text-gray-300'
+              href='#placement-statistics'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               PLACEMENT STATISTICS
             </Link>
             <Link
-              onClick={() => scrollToSection('past-recruiters')}
-              href='/'
-              className='hover:text-gray-300'
+              href='#past-recruiters'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               PAST RECRUITERS
             </Link>
             <Link
-              onClick={() => scrollToSection('contact-us')}
-              href='/'
-              className='hover:text-gray-300'
+              href='#contacts'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               CONTACT US
             </Link>
             <Link
               href='/signup'
-              className='hover:text-gray-300'
+              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              onClick={handleLinkClick}
             >
               STUDENT LOGIN
             </Link>

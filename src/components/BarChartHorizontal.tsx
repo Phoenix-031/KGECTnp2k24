@@ -38,12 +38,12 @@ export function BarChartHorizontal() {
               right: 16,
             }}
           >
-            <CartesianGrid horizontal={false} />
+            <CartesianGrid horizontal={true} />
             <YAxis
               dataKey='department'
               type='category'
               tickLine={false}
-              tickMargin={10}
+              tickMargin={100}
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
               hide
@@ -57,6 +57,7 @@ export function BarChartHorizontal() {
               cursor={false}
               content={<ChartTooltipContent indicator='line' />}
             />
+
             <Bar
               dataKey='desktop'
               fill='var(--color-desktop)'
@@ -78,6 +79,7 @@ export function BarChartHorizontal() {
                 fontSize={12}
               />
             </Bar>
+
             <Bar
               dataKey='mobile'
               fill='var(--color-mobile)'

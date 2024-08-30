@@ -1,16 +1,20 @@
 'use client';
 
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from 'recharts';
-import chartData from '../data/data.json'; // Ensure the path is correct
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+import data from '../data/data.json'; // Ensure the path is correct
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/card';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/chart';
 
-// Define chart configuration
+// Define the chart configuration
 const chartConfig = {
   desktop: {
     label: 'Desktop',
     color: 'hsl(var(--chart-1))',
+  },
+  mobile: {
+    label: 'Mobile',
+    color: 'hsl(var(--chart-2))',
   },
 } satisfies ChartConfig;
 
@@ -24,11 +28,8 @@ export function BarCharts() {
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
-            accessibilityLayer
-            data={chartData.desktop_data_alternative} // Use the alternative data here
-            margin={{
-              top: 20,
-            }}
+            data={data.desktop_and_mobile_data} // Use the imported JSON data here
+            margin={{ top: 20 }}
           >
             <CartesianGrid vertical={false} />
             <XAxis
@@ -40,24 +41,21 @@ export function BarCharts() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<ChartTooltipContent indicator='dashed' />}
             />
             <Bar
               dataKey='desktop'
               fill='var(--color-desktop)'
-              radius={8}
-            >
-              <LabelList
-                position='top'
-                offset={12}
-                className='fill-foreground'
-                fontSize={12}
-              />
-            </Bar>
+              radius={4}
+            />
+            <Bar
+              dataKey='mobile'
+              fill='var(--color-mobile)'
+              radius={4}
+            />
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className='flex-col items-start gap-2 text-sm'>{/* Footer Content */}</CardFooter>
     </Card>
   );
 }

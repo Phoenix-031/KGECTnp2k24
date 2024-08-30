@@ -2,12 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
@@ -15,14 +10,16 @@ const config = {
       padding: '2rem',
       screens: {
         '2xl': '1400px',
-        lg: '1020px',
+        xl: '1280px',
+        lg: '1024px',
         md: '800px',
-        sm: '750px',
+        sm: '768px',
+        xs: '640px',
       },
     },
     extend: {
       blur: {
-        'sm': '3px',
+        sm: '3px',
       },
       zIndex: {
         '-10': '-10',
@@ -76,30 +73,20 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        'rotate-90': {
-          '0%': { transform: 'rotate(180deg)' },
-          '100%': { transform: 'rotate(0deg)' },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
-        'rotate-neg-90': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(180deg)' },
-        },
-        'scale-down': {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
-        },
-        'scale-up': {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
-        'rotate-90': 'rotate-90 0.3s ease-out forwards',
-        'rotate-neg-90': 'rotate-neg-90 0.3s ease-out forwards',
-        'scale-down': 'scale-down 0.3s ease-out forwards',
-        'scale-up': 'scale-up 0.3s ease-out forwards',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
-    }, 
+    },
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;

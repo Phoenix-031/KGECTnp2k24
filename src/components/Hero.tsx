@@ -12,14 +12,12 @@ const Hero = () => {
           <Image
             src={Image1}
             alt='TNP LOGO'
-            className='w-[125px]'
-            layout='responsive'
+            width={125}
           />
           <Image
             src={Image2}
             alt='KGEC LOGO'
-            className='w-[125px]'
-            layout='responsive'
+            width={125}
           />
         </div>
         <div className='flex flex-col justify-center items-center'>
