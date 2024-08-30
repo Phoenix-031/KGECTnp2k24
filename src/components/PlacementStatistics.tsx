@@ -20,7 +20,7 @@ const PlacementStatistics = () => {
       className='h-full flex flex-col justify-center items-center'
     >
       <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
-      <div className='lg:mx-8 lg:w-[90%] lg:mb-4 w-[90%] mb-6 mx-5'>
+      <div className=' px-8 lg:mx-8 lg:w-[90%] lg:mb-4 w-[80vw] mb-6 mx-5'>
         <Accordion
           className='gap-4 items-center'
           type='single'
@@ -41,13 +41,13 @@ const PlacementStatistics = () => {
                 <div className='w-full h-full'>
                   <PlacementTable year={yearData.year} />
                 </div>
-                <div className='w-full h-full mt-10'>
+                <div className='w-full h-full mt-10 '>
                   <PieCharts />
                 </div>
-                <div className='mt-10 w-full h-full'>
+                <div className='mt-10 w-[60%] h-full'>
                   <BarCharts />
                 </div>
-                <div className='mt-10 w-full h-full'>
+                <div className='mt-10 w-[60%] h-full'>
                   <BarChartHorizontal />
                 </div>
               </AccordionContent>
