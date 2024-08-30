@@ -19,10 +19,10 @@ const PlacementStatistics = () => {
       id='placement-statistics'
       className='h-full flex flex-col justify-center items-center'
     >
-      <h2 className='font-bold text-xl mx-8 my-8'>Placement Statistics</h2>
-      <div className=' px-8 lg:mx-8 lg:w-[90%] lg:mb-4 w-[80vw] mb-6 mx-5'>
+      <h2 className='font-bold text-xl mb-10 my-8'>Placement Statistics</h2>
+      <div className=' lg:mx-8 lg:w-[80%] lg:mb-4 w-[80%] mb-6 mx-5'>
         <Accordion
-          className='gap-4 items-center'
+          className='gap-4 items-centerbord'
           type='single'
           collapsible
           value={openYear}
@@ -34,10 +34,10 @@ const PlacementStatistics = () => {
               value={yearData.year}
               className='mb-4'
             >
-              <AccordionTrigger className='flex items-center justify-between p-4 bg-[#B2C1AD] rounded-lg cursor-pointer hover:bg-gray-300 transition'>
+              <AccordionTrigger className='flex items-center justify-between p-4 bg-[#B2C1AD] rounded-[10px] cursor-pointer hover:bg-gray-300 transition'>
                 <span className='text-gray-800'>Year {yearData.year}</span>
               </AccordionTrigger>
-              <AccordionContent className='w-full lg:px-80 lg:py-16 mt-6 bg-[#B2C1AD] rounded-lg flex flex-col items-center justify-center'>
+              <AccordionContent className='w-full lg:px-80 lg:py-16 mt-6 bg-[#B2C1AD] rounded-[15px] flex flex-col items-center justify-center'>
                 <div className='w-full h-full'>
                   <PlacementTable year={yearData.year} />
                 </div>

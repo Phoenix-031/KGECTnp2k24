@@ -17,7 +17,7 @@ export default function TabsDemo() {
   return (
     <div className='w-full mx-auto'>
       <div className='flex items-center justify-center gap-3 m-8'>
-        <div className='flex gap-2 p-2 px-4 bg-slate-300 rounded-lg'>
+        <div className='flex gap-2 p-2 px-4 bg-slate-300 rounded-[10px]'>
           <button
             className={`flex items-center justify-center px-4 sm:px-[80px] md:pl-[100px] lg:px-[80px] py-2 sm:py-[10px] md:py-[12px] lg:py-[15px] bg-slate-300 text-center text-sm sm:text-base md:text-lg lg:text-xl rounded-lg ${activeTab === 'pg' ? 'border-b-2 bg-blue-400 border-blue-500 font-semibold' : 'text-gray-600'}`}
             onClick={() => handleTabClick('pg')}
@@ -36,13 +36,13 @@ export default function TabsDemo() {
       <div className='px-4'>
         {activeTab === 'ug' && (
           <div>
-            <PlacementStatistics />
+            <PlacementStatisticsUG />
           </div>
         )}
 
         {activeTab === 'pg' && (
           <div>
-            <PlacementStatisticsUG />
+            <PlacementStatistics />
           </div>
         )}
       </div>

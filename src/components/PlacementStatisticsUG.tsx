@@ -19,6 +19,7 @@ const PlacementStatisticsUG = () => {
       id='placement-statistics-ug'
       className='h-full flex flex-col justify-center items-center'
     >
+      <h2 className='font-bold text-xl mb-10 my-8'>Placement Statistics</h2>
       <div className='lg:mx-8 lg:w-[80%] lg:mb-4 w-[80%] mb-6 mx-5'>
         <Accordion
           className='gap-4 items-center'
@@ -33,20 +34,20 @@ const PlacementStatisticsUG = () => {
               value={yearData.year}
               className='mb-4'
             >
-              <AccordionTrigger className='flex items-center justify-between p-4 bg-accordian-grey rounded-lg cursor-pointer hover:bg-gray-300 transition'>
+              <AccordionTrigger className='flex items-center justify-between p-4 bg-[#B2C1AD] rounded-[10px] cursor-pointer hover:bg-gray-300 transition'>
                 <span className='text-gray-800'>Year {yearData.year}</span>
               </AccordionTrigger>
-              <AccordionContent className='w-full lg:px-[4rem] lg:py-16 mt-6 bg-accordian-grey rounded-lg flex flex-col items-center justify-center'>
+              <AccordionContent className='w-full mt-6 bg-[#B2C1AD] rounded-[15px] flex flex-col items-center justify-center'>
                 <div className='w-full h-full'>
                   <PlacementTable year={yearData.year} />
                 </div>
-                <div className='w-full h-full mt-10'>
+                <div className='w-full h-full'>
                   <PieCharts />
                 </div>
-                <div className='mt-10 w-full h-full'>
+                <div className='w-full h-full'>
                   <BarCharts />
                 </div>
-                <div className='mt-10 w-full h-full'>
+                <div className='w-full h-full'>
                   <BarChartHorizontal />
                 </div>
               </AccordionContent>
