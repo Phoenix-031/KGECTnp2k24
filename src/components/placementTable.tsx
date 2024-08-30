@@ -12,7 +12,7 @@ export function PlacementTable({ year }: PlacementTableProps) {
 
   return (
     <div className='w-full h-full'>
-      <Table className='border-none bg-accordian-grey px-10'>
+      <Table className='border-none bg-[#B2C1AD] px-10'>
         <TableHeader>
           <TableRow>
             <TableHead className='w-[100px]'></TableHead>

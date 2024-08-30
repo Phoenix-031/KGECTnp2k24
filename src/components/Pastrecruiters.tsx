@@ -6,13 +6,12 @@ import Marquee from 'react-fast-marquee';
 const Pastrecruiters = () => {
   return (
     <div
-      className='flex flex-col justify-center items-center min-s-screen'
+      className='bg-[#1A1C1A] pb-10 text-white flex flex-col justify-center items-center min-s-screen'
       id='past-recruiters'
     >
-      <p className='text-4xl p-4 mb-10 non-italic font-bold'>Past Recruiters</p>
+      <p className='text-4xl p-4 mb-10 non-italic font-bold pt-10 '>Past Recruiters</p>
+
       <div className='relative overflow-hidden w-[100%] flex flex-row justify-center items-center'>
-        <div className='absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-400/50 via-slate-300/20 to-white  blur-lg opacity-100'></div>
-        <div className='absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-400/50 via-slate-300/20 to-white blur-lg opacity-100'></div>
         <div className='w-[90%]'>
           <Marquee
             gradient={false}
@@ -39,8 +38,6 @@ const Pastrecruiters = () => {
       </div>
 
       <div className='relative overflow-hidden w-[100%] flex flex-row justify-center items-center'>
-        <div className='absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-400/50 via-slate-300/20 to-white  blur-lg opacity-100'></div>
-        <div className='absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-400/50 via-slate-300/20 to-white blur-lg opacity-100'></div>
         <div className='w-[90%]'>
           <Marquee
             gradient={false}
