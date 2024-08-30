@@ -4,7 +4,7 @@ const Contactinfo = () => {
   return (
     <div
       className='flex flex-col justify-center items-center min-s-screen'
-      id='contact-us'
+      id='contacts'
     >
       <div className='flex flex-col justify-center items-center min-s-screen'>
         <p className='font-bold text-4xl p-4 text-red-900'>Contact Info</p>

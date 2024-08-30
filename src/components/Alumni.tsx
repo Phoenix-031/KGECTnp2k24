@@ -7,12 +7,12 @@ const Alumni = () => {
   return (
     <div className='flex flex-col justify-center items-center min-s-screen'>
       <p className='text-4xl p-10 non-italic font-bold '>Notable Alumni</p>
-      <p className='px-8 text-center mb-16 font-Montserrat text-2xl w-[80vw]'>
+      <p className='text-center mb-16 font-Montserrat text-xl w-[90%]'>
         The alumni of Kalyani Government Engineering College have made their mark on various government, academia and
         corporate fronts. Meet some of our alumni who we are proud of producing.
       </p>
       <div className='mb-10 w-full flex flex-col justify-center items-center'>
-        <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 row-auto'>
+        <div className='w-[70vw] flex flex-wrap justify-center items-center gap-4 row-auto'>
           {a.map((item, index) => {
             return (
               <div

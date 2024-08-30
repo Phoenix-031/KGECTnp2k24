@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <SpeedInsights />
-
-        <Navbar />
-
-        {children}
+        <div className='h-screen '>
+          <SpeedInsights />
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
