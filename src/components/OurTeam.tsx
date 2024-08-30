@@ -66,14 +66,14 @@ const OurTeam = () => {
                   href={item.linkedin}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='relative w-full flex justify-center items-center'
+                  className='relative overflow-hidden'
                 >
                   <Image
                     src={item.image}
                     alt={item.name}
-                    className='object-cover sm:w-48 sm:h-48 w-52 h-52 rounded-full'
+                    className='transform transition-transform duration-300 hover:scale-120 object-cover sm:w-48 sm:h-48 w-52 h-52 rounded-full'
                   />
-                  <div className='absolute inset-0 flex items-center justify-center bg-blue-500 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity rounded-full'>
+                  <div className='absolute sm:w-48 sm:h-48 w-52 h-52 inset-0 flex items-center justify-center bg-blue-500 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity rounded-full'>
                     <FaLinkedin className='w-[40px] h-[40px] text-blue-600' />
                   </div>
                 </a>
