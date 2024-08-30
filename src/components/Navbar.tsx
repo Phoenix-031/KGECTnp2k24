@@ -15,14 +15,18 @@ export const Navbar = () => {
     if (isOpen) {
       menuClasses = [
         'flex',
-        'absolute',
-        'top-[71px]',
-        'bg-black/70',
+        'fixed',
+        'inset-0',
+        '-top-0',
+        'justify-center',
+        'items-center',
+        'text-center',
+        'text-xl',
+        'bg-black/50',
         'backdrop-blur-md',
-        'w-1/2',
+        'w-screen',
+        'h-screen',
         'right-0',
-        'p-4',
-        'gap-15',
         'flex-col',
         'animate-slide-down',
       ];
@@ -74,12 +78,22 @@ export const Navbar = () => {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      // Disable scrolling
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = '';
+    }
+  }, [isOpen]);
+
   return (
     <>
       <div className='fixed z-50'>
         <nav
           ref={navbarRef}
-          className={`bg-black/50 inset-0 backdrop-blur-md w-screen text-white font-semibold p-4 text-sm md:flex md:justify-between  top-0 md:items-center transition-transform duration-300 z-50 ${
+          className={`bg-black/50 inset-0 backdrop-blur-md w-screen text-white font-semibold p-4 text-sm lg:flex lg:justify-center top-0 md:items-center transition-transform duration-300 z-50 ${
             isVisible ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
@@ -99,49 +113,49 @@ export const Navbar = () => {
               <div className={`${getMenuClasses()} pl-4 gap-5`}>
                 <Link
                   href='/'
-                  className='hover:text-gray-300 text-xs lg:text-base'
+                  className='hover:text-gray-300 text-md lg:text-base lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   HOME
                 </Link>
                 <Link
                   href='#whykgec'
-                  className='hover:text-gray-300 text-xs lg:text-base '
+                  className='hover:text-gray-300 text-md lg:text-base lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   WHY RECRUIT US
                 </Link>
                 <Link
                   href='#tnp'
-                  className='hover:text-gray-300  text-xs lg:text-base'
+                  className='hover:text-gray-300  text-md  lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   FROM T&P CELL
                 </Link>
                 <Link
                   href='#placement-statistics'
-                  className='hover:text-gray-300 text-xs lg:text-base'
+                  className='hover:text-gray-300 text-md  lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   PLACEMENT STATISTICS
                 </Link>
                 <Link
                   href='#past-recruiters'
-                  className='hover:text-gray-300 text-xs lg:text-base'
+                  className='hover:text-gray-300 text-md lg:text-base lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   PAST RECRUITERS
                 </Link>
                 <Link
                   href='#contacts'
-                  className='hover:text-gray-300 text-md  lg:text-base'
+                  className='hover:text-gray-300 text-md lg:text-base lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   CONTACT US
                 </Link>
                 <Link
                   href='/signup'
-                  className='hover:text-gray-300 text-sm lg:text-base'
+                  className='hover:text-gray-300 text-md lg:text-base lg:inline-block text-center w-full lg:w-auto'
                   onClick={handleLinkClick}
                 >
                   STUDENT LOGIN
