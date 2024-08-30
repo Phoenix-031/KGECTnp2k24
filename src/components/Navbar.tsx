@@ -26,7 +26,7 @@ export const Navbar = () => {
         'animate-slide-down',
       ];
     } else {
-      menuClasses = ['hidden', 'md:flex', 'animate-slide-up'];
+      menuClasses = ['hidden', ' lg:flex', 'animate-slide-up'];
     }
 
     return menuClasses.join(' ');
@@ -105,55 +105,55 @@ export const Navbar = () => {
           <div className={`${getMenuClasses()} pl-4 gap-5`}>
             <Link
               href='/'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md '
               onClick={handleLinkClick}
             >
               HOME
             </Link>
             <Link
               href='#whykgec'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md  '
               onClick={handleLinkClick}
             >
               WHY RECRUIT US
             </Link>
             <Link
               href='#tnp'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300  text-md'
               onClick={handleLinkClick}
             >
               FROM T&P CELL
             </Link>
             <Link
               href='#placement-statistics'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md'
               onClick={handleLinkClick}
             >
               PLACEMENT STATISTICS
             </Link>
             <Link
               href='#past-recruiters'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md lg:text-base'
               onClick={handleLinkClick}
             >
               PAST RECRUITERS
             </Link>
             <Link
               href='#contacts'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md  lg:text-base'
               onClick={handleLinkClick}
             >
               CONTACT US
             </Link>
             <Link
               href='/signup'
-              className='hover:text-gray-300 text-xs md:text-sm lg:text-base'
+              className='hover:text-gray-300 text-md lg:text-base'
               onClick={handleLinkClick}
             >
               STUDENT LOGIN
             </Link>
           </div>
-          <div className='md:hidden flex items-center mr-[-14px]'>
+          <div className='flex items-center mr-[-14px] lg:hidden'>
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
                 className={`transition-transform duration-300 ${
