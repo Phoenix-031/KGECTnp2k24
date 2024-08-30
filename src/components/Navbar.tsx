@@ -16,8 +16,9 @@ export const Navbar = () => {
       menuClasses = [
         'flex',
         'absolute',
-        'top-[60px]',
-        'bg-custom-blue',
+        'top-[71px]',
+        'bg-black/70',
+        'backdrop-blur-md',
         'w-1/2',
         'right-0',
         'p-4',
@@ -26,7 +27,7 @@ export const Navbar = () => {
         'animate-slide-down',
       ];
     } else {
-      menuClasses = ['hidden', ' lg:flex', 'animate-slide-up'];
+      menuClasses = ['hidden', 'lg:flex', 'animate-slide-up'];
     }
 
     return menuClasses.join(' ');
@@ -53,13 +54,15 @@ export const Navbar = () => {
     const handleScroll = () => {
       const currentScrollTop = window.pageYOffset;
 
-      if (currentScrollTop > lastScrollTop) {
+      if (currentScrollTop > lastScrollTop && currentScrollTop > 50) {
+        // Scroll Down: Hide Navbar
         setIsVisible(false);
-      } else {
+      } else if (currentScrollTop < lastScrollTop) {
+        // Scroll Up: Show Navbar
         setIsVisible(true);
       }
 
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+      setLastScrollTop(currentScrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -67,98 +70,51 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
-  {
-    /* const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-*/
-  }
-
   const handleLinkClick = () => {
-    // Close the menu when a link is clicked
     setIsOpen(false);
   };
 
   return (
     <>
+    <div className='fixed z-50'>
       <nav
         ref={navbarRef}
-        className={`bg-black/50 inset-0 backdrop-blur-md text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
+        className={`bg-black/50 inset-0 backdrop-blur-md w-screen text-white font-semibold p-4 text-sm md:flex md:justify-between  top-0 md:items-center transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
         <div className='container flex justify-between items-center'>
-          <a
-            href='#'
-            className='text-2xl font-bold ml-[-14px]'
-          >
-            <Image
-              alt='Navbar Logo'
-              src={'/kgec.svg'}
-              width={40}
-              height={40}
-            />
+          <a href='#' className='text-2xl font-bold ml-[-14px]'>
+            <Image alt='Navbar Logo' src={'/kgec.svg'} width={40} height={40} />
           </a>
+          <div className=''>
           <div className={`${getMenuClasses()} pl-4 gap-5`}>
-            <Link
-              href='/'
-              className='hover:text-gray-300 text-md '
-              onClick={handleLinkClick}
-            >
+            <Link href='/' className='hover:text-gray-300 text-xs lg:text-base' onClick={handleLinkClick}>
               HOME
             </Link>
-            <Link
-              href='#whykgec'
-              className='hover:text-gray-300 text-md  '
-              onClick={handleLinkClick}
-            >
+            <Link href='#whykgec' className='hover:text-gray-300 text-xs lg:text-base ' onClick={handleLinkClick}>
               WHY RECRUIT US
             </Link>
-            <Link
-              href='#tnp'
-              className='hover:text-gray-300  text-md'
-              onClick={handleLinkClick}
-            >
+            <Link href='#tnp' className='hover:text-gray-300  text-xs lg:text-base' onClick={handleLinkClick}>
               FROM T&P CELL
             </Link>
-            <Link
-              href='#placement-statistics'
-              className='hover:text-gray-300 text-md'
-              onClick={handleLinkClick}
-            >
+            <Link href='#placement-statistics' className='hover:text-gray-300 text-xs lg:text-base' onClick={handleLinkClick}>
               PLACEMENT STATISTICS
             </Link>
-            <Link
-              href='#past-recruiters'
-              className='hover:text-gray-300 text-md lg:text-base'
-              onClick={handleLinkClick}
-            >
+            <Link href='#past-recruiters' className='hover:text-gray-300 text-xs lg:text-base' onClick={handleLinkClick}>
               PAST RECRUITERS
             </Link>
-            <Link
-              href='#contacts'
-              className='hover:text-gray-300 text-md  lg:text-base'
-              onClick={handleLinkClick}
-            >
+            <Link href='#contacts' className='hover:text-gray-300 text-md  lg:text-base' onClick={handleLinkClick}>
               CONTACT US
             </Link>
-            <Link
-              href='/signup'
-              className='hover:text-gray-300 text-md lg:text-base'
-              onClick={handleLinkClick}
-            >
+            <Link href='/signup' className='hover:text-gray-300 text-sm lg:text-base' onClick={handleLinkClick}>
               STUDENT LOGIN
             </Link>
           </div>
           <div className='flex items-center mr-[-14px] lg:hidden'>
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
-                className={`transition-transform duration-300 ${
-                  isOpen ? 'rotate-90 scale-down' : 'rotate-neg-90 scale-up'
-                }`}
+                className={`transition-transform duration-300 ${isOpen ? 'rotate-90 scale-down' : 'rotate-neg-90 scale-up'}`}
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
@@ -185,13 +141,10 @@ export const Navbar = () => {
                 </g>
               </svg>
             </button>
-          </div>
+          </div></div>
         </div>
-      </nav>
-      <div
-        className={getOverlayClasses()}
-        onClick={() => setIsOpen(false)}
-      ></div>
+      </nav></div>
+      <div className={getOverlayClasses()} onClick={() => setIsOpen(false)}></div>
     </>
   );
 };
