@@ -3,14 +3,14 @@ import { faculties } from '@/data/fromTNP';
 
 const FromTnPSection = () => {
   return (
-    <section className='py-12 bg-white flex flex-col justify-center items-center'>
+    <section className='py-12 bg-[#ECDFCC] flex flex-col justify-center items-center'>
       <div className='mx-5 px-4'>
         <h2 className='text-3xl font-bold text-center mb-8'>From TnP</h2>
         <div className='w-[90vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
           {faculties.map((faculty, index) => (
             <div
               key={index}
-              className='w-full justify-center p-6 bg-custom-gray2 shadow-md flex items-center lg:items-start flex-col sm:items-center sm:mb-[50px] md:flex-col md:items-center md:mb-[50px]'
+              className='rounded-lg  text-[#1E201E] w-full justify-center p-6 bg-[#B2C1AD] shadow-md flex items-center lg:items-start flex-col sm:items-center sm:mb-[50px] md:flex-col md:items-center md:mb-[50px]'
             >
               <Image
                 src={faculty.image}

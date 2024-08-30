@@ -77,7 +77,7 @@ export const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className={`bg-custom-blue text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
+        className={`bg-black/50 inset-0 backdrop-blur-md text-white font-semibold p-4 text-sm md:flex md:justify-between sticky top-0 md:items-center transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >

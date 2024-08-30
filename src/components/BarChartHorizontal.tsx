@@ -23,7 +23,7 @@ const chartConfig = {
 
 export function BarChartHorizontal() {
   return (
-    <Card className='bg-accordian-grey border-none'>
+    <Card className='bg-[#B2C1AD] border-none'>
       <CardHeader>
         <CardTitle></CardTitle>
         <CardDescription></CardDescription>
