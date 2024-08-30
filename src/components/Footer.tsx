@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import kgec_logo_white from '@/assets/images/KGEC_LOGO_white.png';
+
 import Link from 'next/link';
 import React from 'react';
 import 'tailwindcss/tailwind.css';
@@ -6,14 +8,14 @@ import 'tailwindcss/tailwind.css';
 function Footer() {
   return (
     <div
-      className='text-white bg-[#0C84AA] w-full px-10 pt-10 pb-4'
-      id='contacts'
+      className='text-white bg-[#3C3D37] w-full px-10 pt-10 pb-4'
+      id='contact-us'
     >
       <div className='flex flex-row justify-start items-center'>
         <Link href={'/'}>
           <Image
             alt='Navbar Logo'
-            src={'/kgec.svg'}
+            src={kgec_logo_white}
             width={70}
             height={70}
           />

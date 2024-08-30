@@ -6,16 +6,20 @@ import OurTeam from '@/components/OurTeam';
 import Pastrecruiters from '@/components/Pastrecruiters';
 import PlacementStatistics from '@/components/PlacementStatistics';
 // import TestimonialSection from '@/components/TestimonialSection';
+import TabSwap from '@/components/TabSwap';
+import TestimonialSection from '@/components/TestimonialSection';
 import WhyKGECSection from '@/components/WhyKGECSection';
 
 function Home() {
   return (
-    <main className='w-full overflow-x-hidden'>
+    <main className='bg-[#ECDFCC] w-full overflow-x-hidden opacity-0.2'>
       <Hero />
       <WhyKGECSection />
       <FromTnPSection />
       {/* <TestimonialSection /> */}
       <PlacementStatistics />
+      <TestimonialSection />
+      <TabSwap />
       <Pastrecruiters />
       <OurTeam />
       <Alumni />
